@@ -1,6 +1,6 @@
 PODS:
   - KeychainAccess (2.3.6)
-  - Kinvey (3.0.23):
+  - Kinvey (3.0.25):
     - KeychainAccess (~> 2.3.5)
     - PromiseKit (~> 3.1.1)
     - Realm (~> 1.0.2)
@@ -37,13 +37,13 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   KeychainAccess: 7f10e2ef998ddf954a64d5d608be08677774684d
-  Kinvey: c4127847f8fef9e8ca974a2f3748436ab81be6d4
+  Kinvey: afe3a59cfd4c4fad29c5d675dc361374c38e3578
   OMGHTTPURLRQ: a547be1b9721ddfbf9d08aab56ab72dc4c1cc417
   PromiseKit: 4e8127c22a9b29d1b44958ab2ec762ea6115cbfb
   Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
   RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
   ResearchKit: badba0340dd71d1cbab4789a0bf01b26022b8f94
 
-PODFILE CHECKSUM: 6debf52f56ca57def7b96385f8487ebbb7b8a9dc
+PODFILE CHECKSUM: bb801589f8ed671e437c2fd3e4075446d4a04efc
 
 COCOAPODS: 1.0.1

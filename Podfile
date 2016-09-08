@@ -12,6 +12,8 @@ target 'KinveyResearchKit' do
   target 'KinveyResearchKitTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Kinvey'
+    pod 'ResearchKit'
   end
 
 end

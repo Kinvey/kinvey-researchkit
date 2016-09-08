@@ -11,6 +11,7 @@
 		961DB3B81D6F451D00202003 /* KinveyResearchKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 961DB3B71D6F451D00202003 /* KinveyResearchKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		961DB3BF1D6F451D00202003 /* KinveyResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961DB3B41D6F451C00202003 /* KinveyResearchKit.framework */; };
 		961DB3C41D6F451D00202003 /* KinveyResearchKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961DB3C31D6F451D00202003 /* KinveyResearchKitTests.swift */; };
+		961DB3CF1D6F4C4C00202003 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961DB3CE1D6F4C4C00202003 /* Result.swift */; };
 		D4BD3CC73B644F476813EC0E /* Pods_KinveyResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC56E5172A2A938357345F1 /* Pods_KinveyResearchKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		961DB3BE1D6F451D00202003 /* KinveyResearchKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinveyResearchKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		961DB3C31D6F451D00202003 /* KinveyResearchKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinveyResearchKitTests.swift; sourceTree = "<group>"; };
 		961DB3C51D6F451D00202003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961DB3CE1D6F4C4C00202003 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		A3D8FF6F4F7A6018AFB0930C /* Pods-KinveyResearchKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinveyResearchKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KinveyResearchKitTests/Pods-KinveyResearchKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B996C6933F2D476A540FB54D /* Pods-KinveyResearchKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinveyResearchKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KinveyResearchKit/Pods-KinveyResearchKit.debug.xcconfig"; sourceTree = "<group>"; };
 		CD0654CF55FA0333BDD21163 /* Pods-KinveyResearchKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinveyResearchKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-KinveyResearchKit/Pods-KinveyResearchKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				961DB3B71D6F451D00202003 /* KinveyResearchKit.h */,
 				961DB3B91D6F451D00202003 /* Info.plist */,
+				961DB3CE1D6F4C4C00202003 /* Result.swift */,
 			);
 			path = KinveyResearchKit;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961DB3CF1D6F4C4C00202003 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B996C6933F2D476A540FB54D /* Pods-KinveyResearchKit.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -436,6 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinvey.KinveyResearchKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -443,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD0654CF55FA0333BDD21163 /* Pods-KinveyResearchKit.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
