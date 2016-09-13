@@ -49,15 +49,13 @@ class KinveyResearchKitTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSaveTaskResult() {
         
         weak var expectationSave = expectationWithDescription("save")
         
         let taskResultStore = DataStore<TaskResult>.collection(.Network)
         
-        let taskId = "foo"
+        let taskId = "example"
         let uuid = NSUUID()
         let outputDir =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         let result = ORKTaskResult(taskIdentifier: taskId, taskRunUUID: uuid, outputDirectory: outputDir)
