@@ -19,7 +19,7 @@ class KinveyResearchKitTests: XCTestCase {
         
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        Client.sharedClient.initialize(appKey:"kid_S1Bd9cy9", appSecret: "5b1770f12e8c4563ad9fc4cc502e7f04")
+        Client.sharedClient.initialize(appKey:"kid_SJFDiXDn", appSecret: "feacdd13aca0451ebc9edd58fb8304c7")
         Client.sharedClient.logNetworkEnabled = true
         
         
@@ -27,14 +27,14 @@ class KinveyResearchKitTests: XCTestCase {
             print ("logged in as", user)
         } else {
             
-            weak var expectationLogin = expectationWithDescription("login")
+            weak var expectationLogin = expectation(description: "login")
             
             User.login(username: "test", password: "test") { (user, error) in
                 print ("new user logged in", user)
                 expectationLogin?.fulfill()
             }
             
-            waitForExpectationsWithTimeout(30, handler: { error in
+            waitForExpectations(timeout: 30, handler: { error in
                 expectationLogin = nil
             })
         }
@@ -51,14 +51,14 @@ class KinveyResearchKitTests: XCTestCase {
     
     func testSaveTaskResult() {
         
-        weak var expectationSave = expectationWithDescription("save")
+        weak var expectationSave = expectation(description: "save")
         
-        let taskResultStore = DataStore<TaskResult>.collection(.Network)
+        let taskResultStore = DataStore<TaskResult>.collection(.network)
         
         let taskId = "example"
-        let uuid = NSUUID()
-        let outputDir =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-        let result = ORKTaskResult(taskIdentifier: taskId, taskRunUUID: uuid, outputDirectory: outputDir)
+        let uuid = UUID()
+        let outputDir =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let result = ORKTaskResult(taskIdentifier: taskId, taskRun: uuid, outputDirectory: outputDir)
         taskResultStore.save(TaskResult(taskResult: result)) { (kResult, error) in
             if (kResult != nil) {
                 print("success saving")
@@ -71,7 +71,7 @@ class KinveyResearchKitTests: XCTestCase {
             expectationSave?.fulfill()
         }
         
-        waitForExpectationsWithTimeout(30) { error in
+        waitForExpectations(timeout: 30) { error in
             expectationSave = nil
         }
         
@@ -80,7 +80,7 @@ class KinveyResearchKitTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

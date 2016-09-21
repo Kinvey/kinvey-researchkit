@@ -1,0 +1,2 @@
+github "KinveyApps/ResearchKit" "stable_xcode80_candidate"
+git "git@github.com:Kinvey/ios-library.git" "feature/3.0-swift_3.0"

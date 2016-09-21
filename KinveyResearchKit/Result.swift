@@ -12,20 +12,20 @@ import Kinvey
 class Result: Entity {
     
     dynamic var identifier: String?
-    dynamic var endDate: NSDate?
-    dynamic var startDate: NSDate?
+    dynamic var endDate: Date?
+    dynamic var startDate: Date?
     var saveAble: Bool?
     
-    private convenience init(result: ORKResult){
+    internal convenience init(result: ORKResult){
         self.init()
         
         identifier = result.identifier
         endDate = result.endDate
         startDate = result.startDate
-        saveAble = result.saveable
+        saveAble = result.isSaveable
     }
     
-    override func propertyMapping(map: Map) {
+    override func propertyMapping(_ map: Map) {
         super.propertyMapping(map)
         
         identifier <- map [PersistableIdKey]
@@ -43,7 +43,7 @@ class TaskResult: Result {
     convenience init (taskResult: ORKTaskResult) {
         self.init(result: taskResult)
         
-        taskRunUUID = taskResult.taskRunUUID.UUIDString
+        taskRunUUID = taskResult.taskRunUUID.uuidString
         outputDirectory = taskResult.outputDirectory?.absoluteString
     }
     
@@ -51,7 +51,7 @@ class TaskResult: Result {
         return "TaskResult"
     }
     
-    override func propertyMapping(map: Map) {
+    override func propertyMapping(_ map: Map) {
         super.propertyMapping(map)
         
         taskRunUUID <- map ["taskRunUUID"]
