@@ -1,0 +1,10 @@
+framework module PMKStoreKit {
+  umbrella header "PMKStoreKit.h"
+
+  export *
+  module * { export * }
+}
+
+module PMKStoreKit.Swift {
+    header "PMKStoreKit-Swift.h"
+}

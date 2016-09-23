@@ -1,0 +1,3 @@
+framework module PMKCoreBluetooth {
+    header "PMKCoreBluetooth-Swift.h"
+}

@@ -49,24 +49,44 @@ class KinveyResearchKitTests: XCTestCase {
         super.tearDown()
     }
     
+    var orkTaskRestult: ORKTaskResult {
+        get {
+            let taskId = "TaskResult"
+            let uuid = UUID()
+            let outputDir =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+            let taskResult = ORKTaskResult(taskIdentifier: taskId, taskRun: uuid, outputDirectory: outputDir)
+            return taskResult
+        }
+    }
+    
+    var taskRestult: TaskResult {
+        get {
+            return TaskResult(taskResult: orkTaskRestult)
+        }
+    }
+    
+    var orkStepResult: ORKStepResult {
+        get {
+            let taskId = "StepResult"
+            let stepResult = ORKStepResult(stepIdentifier: taskId, results: [self.orkTaskRestult])
+            return stepResult
+        }
+    }
+    
+    var stepResult: StepResult {
+        get {
+            return StepResult(stepResult: orkStepResult)
+        }
+    }
+    
     func testSaveTaskResult() {
-        
         weak var expectationSave = expectation(description: "save")
         
         let taskResultStore = DataStore<TaskResult>.collection(.network)
         
-        let taskId = "example"
-        let uuid = UUID()
-        let outputDir =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-        let result = ORKTaskResult(taskIdentifier: taskId, taskRun: uuid, outputDirectory: outputDir)
-        taskResultStore.save(TaskResult(taskResult: result)) { (kResult, error) in
-            if (kResult != nil) {
-                print("success saving")
-                print(kResult)
-            } else {
-                print("error saving")
-                print(error)
-            }
+        taskResultStore.save(taskRestult) { (kResult, error) in
+            XCTAssertNotNil(kResult)
+            XCTAssertNil(error)
             
             expectationSave?.fulfill()
         }
@@ -74,8 +94,23 @@ class KinveyResearchKitTests: XCTestCase {
         waitForExpectations(timeout: 30) { error in
             expectationSave = nil
         }
+    }
+    
+    func testSaveStepResult() {
+        weak var expectationSave = expectation(description: "save")
         
+        let stepResultStore = DataStore<StepResult>.collection(.network)
         
+        stepResultStore.save(stepResult) { (kResult, error) in
+            XCTAssertNotNil(kResult)
+            XCTAssertNil(error)
+            
+            expectationSave?.fulfill()
+        }
+        
+        waitForExpectations(timeout: 30) { error in
+            expectationSave = nil
+        }
     }
     
     func testPerformanceExample() {

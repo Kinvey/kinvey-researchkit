@@ -1,0 +1,10 @@
+framework module PMKCloudKit {
+  umbrella header "PMKCloudKit.h"
+
+  export *
+  module * { export * }
+}
+
+module PMKCloudKit.Swift {
+    header "PMKCloudKit-Swift.h"
+}

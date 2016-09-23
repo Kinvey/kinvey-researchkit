@@ -1,0 +1,6 @@
+framework module PMKQuartzCore {
+  umbrella header "PMKQuartzCore.h"
+
+  export *
+  module * { export * }
+}

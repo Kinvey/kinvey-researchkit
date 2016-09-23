@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57680BF41D94CCE60032540A /* Kinvey.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57941F991D8C477D00FB4387 /* Kinvey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57680BF51D94CCED0032540A /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57941F9C1D8C478900FB4387 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57680BF61D94CCF60032540A /* ResearchKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57CB09DE1D8B38A600C382BF /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57680BF71D94EA7E0032540A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9B1D8C478900FB4387 /* Realm.framework */; };
+		57680BF81D94EA7E0032540A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9C1D8C478900FB4387 /* RealmSwift.framework */; };
+		57680BFA1D94ED0E0032540A /* KeychainAccess.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57680BF91D94ED050032540A /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57680BFB1D94ED190032540A /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57941F9B1D8C478900FB4387 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57680BFD1D94F00A0032540A /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57680BFC1D94F0080032540A /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57680BFF1D94F5870032540A /* TaskResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57680BFE1D94F5870032540A /* TaskResult.swift */; };
+		57680C011D94F5C60032540A /* CollectionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57680C001D94F5C60032540A /* CollectionResult.swift */; };
+		57680C031D94F8050032540A /* StepResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57680C021D94F8050032540A /* StepResult.swift */; };
+		57680C081D9502020032540A /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57680C071D9502020032540A /* Factory.swift */; };
 		57941F9A1D8C477D00FB4387 /* Kinvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F991D8C477D00FB4387 /* Kinvey.framework */; };
-		57941F9D1D8C478900FB4387 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9B1D8C478900FB4387 /* Realm.framework */; };
-		57941F9E1D8C478900FB4387 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9C1D8C478900FB4387 /* RealmSwift.framework */; };
 		57941F9F1D8C47C100FB4387 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9B1D8C478900FB4387 /* Realm.framework */; };
 		57941FA01D8C47C100FB4387 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9C1D8C478900FB4387 /* RealmSwift.framework */; };
 		57941FA11D8C47C100FB4387 /* Kinvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F991D8C477D00FB4387 /* Kinvey.framework */; };
@@ -31,7 +41,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		57680BF21D94CCD20032540A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				57680BF61D94CCF60032540A /* ResearchKit.framework in CopyFiles */,
+				57680BF41D94CCE60032540A /* Kinvey.framework in CopyFiles */,
+				57680BF51D94CCED0032540A /* RealmSwift.framework in CopyFiles */,
+				57680BFB1D94ED190032540A /* Realm.framework in CopyFiles */,
+				57680BFA1D94ED0E0032540A /* KeychainAccess.framework in CopyFiles */,
+				57680BFD1D94F00A0032540A /* PromiseKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		57680BF91D94ED050032540A /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		57680BFC1D94F0080032540A /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		57680BFE1D94F5870032540A /* TaskResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskResult.swift; sourceTree = "<group>"; };
+		57680C001D94F5C60032540A /* CollectionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionResult.swift; sourceTree = "<group>"; };
+		57680C021D94F8050032540A /* StepResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepResult.swift; sourceTree = "<group>"; };
+		57680C071D9502020032540A /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		57941F991D8C477D00FB4387 /* Kinvey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kinvey.framework; path = Carthage/Build/iOS/Kinvey.framework; sourceTree = "<group>"; };
 		57941F9B1D8C478900FB4387 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		57941F9C1D8C478900FB4387 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
@@ -50,10 +84,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57941F9D1D8C478900FB4387 /* Realm.framework in Frameworks */,
 				57941F9A1D8C477D00FB4387 /* Kinvey.framework in Frameworks */,
-				57941F9E1D8C478900FB4387 /* RealmSwift.framework in Frameworks */,
 				57CB09DF1D8B38A600C382BF /* ResearchKit.framework in Frameworks */,
+				57680BF71D94EA7E0032540A /* Realm.framework in Frameworks */,
+				57680BF81D94EA7E0032540A /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +130,11 @@
 			children = (
 				961DB3B71D6F451D00202003 /* KinveyResearchKit.h */,
 				961DB3B91D6F451D00202003 /* Info.plist */,
+				57680C071D9502020032540A /* Factory.swift */,
 				961DB3CE1D6F4C4C00202003 /* Result.swift */,
+				57680C001D94F5C60032540A /* CollectionResult.swift */,
+				57680C021D94F8050032540A /* StepResult.swift */,
+				57680BFE1D94F5870032540A /* TaskResult.swift */,
 			);
 			path = KinveyResearchKit;
 			sourceTree = "<group>";
@@ -113,6 +151,8 @@
 		968706ED53EA6A18FB2ADAB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57680BFC1D94F0080032540A /* PromiseKit.framework */,
+				57680BF91D94ED050032540A /* KeychainAccess.framework */,
 				57941F9B1D8C478900FB4387 /* Realm.framework */,
 				57941F9C1D8C478900FB4387 /* RealmSwift.framework */,
 				57941F991D8C477D00FB4387 /* Kinvey.framework */,
@@ -160,6 +200,7 @@
 				961DB3BA1D6F451D00202003 /* Sources */,
 				961DB3BB1D6F451D00202003 /* Frameworks */,
 				961DB3BC1D6F451D00202003 /* Resources */,
+				57680BF21D94CCD20032540A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -234,7 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57680C011D94F5C60032540A /* CollectionResult.swift in Sources */,
 				961DB3CF1D6F4C4C00202003 /* Result.swift in Sources */,
+				57680C031D94F8050032540A /* StepResult.swift in Sources */,
+				57680BFF1D94F5870032540A /* TaskResult.swift in Sources */,
+				57680C081D9502020032540A /* Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

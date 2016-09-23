@@ -1,0 +1,10 @@
+framework module PMKOMGHTTPURLRQ {
+  umbrella header "PMKOMGHTTPURLRQ.h"
+
+  export *
+  module * { export * }
+}
+
+module PMKOMGHTTPURLRQ.Swift {
+    header "PMKOMGHTTPURLRQ-Swift.h"
+}
