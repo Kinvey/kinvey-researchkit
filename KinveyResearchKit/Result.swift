@@ -10,7 +10,7 @@ import ResearchKit
 import Kinvey
 import RealmSwift
 
-class Result: Entity {
+open class Result: Entity {
     
     dynamic var identifier: String?
     dynamic var startDate: Date?
@@ -28,7 +28,7 @@ class Result: Entity {
         saveable.value = result.isSaveable
     }
     
-    override func propertyMapping(_ map: Map) {
+    override open func propertyMapping(_ map: Map) {
         super.propertyMapping(map)
         
         identifier <- map[PersistableIdKey]

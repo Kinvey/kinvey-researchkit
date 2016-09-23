@@ -17,16 +17,12 @@ class KinveyResearchKitTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        
         // Put setup code here. This method is called before the invocation of each test method in the class.
         Client.sharedClient.initialize(appKey:"kid_SJFDiXDn", appSecret: "feacdd13aca0451ebc9edd58fb8304c7")
-        Client.sharedClient.logNetworkEnabled = true
-        
         
         if let user = Client.sharedClient.activeUser {
             print ("logged in as", user)
         } else {
-            
             weak var expectationLogin = expectation(description: "login")
             
             User.login(username: "test", password: "test") { (user, error) in
@@ -38,9 +34,6 @@ class KinveyResearchKitTests: XCTestCase {
                 expectationLogin = nil
             })
         }
-        
-
-        
     }
     
     override func tearDown() {
@@ -49,9 +42,9 @@ class KinveyResearchKitTests: XCTestCase {
         super.tearDown()
     }
     
-    var orkTaskRestult: ORKTaskResult {
+    var taskResult: ORKTaskResult {
         get {
-            let taskId = "TaskResult"
+            let taskId = "TaskResult_ID"
             let uuid = UUID()
             let outputDir =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
             let taskResult = ORKTaskResult(taskIdentifier: taskId, taskRun: uuid, outputDirectory: outputDir)
@@ -59,57 +52,210 @@ class KinveyResearchKitTests: XCTestCase {
         }
     }
     
-    var taskRestult: TaskResult {
+    var stepResult: ORKStepResult {
         get {
-            return TaskResult(taskResult: orkTaskRestult)
-        }
-    }
-    
-    var orkStepResult: ORKStepResult {
-        get {
-            let taskId = "StepResult"
-            let stepResult = ORKStepResult(stepIdentifier: taskId, results: [self.orkTaskRestult])
+            let stepId = "StepResult_ID"
+            let stepResult = ORKStepResult(stepIdentifier: stepId, results: [taskResult])
             return stepResult
         }
     }
     
-    var stepResult: StepResult {
-        get {
-            return StepResult(stepResult: orkStepResult)
+    lazy var taskResultStore = DataStore<TaskResult>.collection(.network)
+    lazy var stepResultStore = DataStore<StepResult>.collection(.network)
+    
+    func testTaskResult() {
+        do { //save
+            weak var expectationSave = expectation(description: "Save")
+            
+            taskResultStore.save(taskResult) { (result, error) in
+                XCTAssertNotNil(result)
+                XCTAssertNil(error)
+                
+                if let result = result {
+                    XCTAssertEqual(result.identifier, self.taskResult.identifier)
+                }
+                
+                expectationSave?.fulfill()
+            }
+            
+            waitForExpectations(timeout: 30) { error in
+                expectationSave = nil
+            }
+        }
+        
+        do { //find
+            weak var expectationFind = expectation(description: "Find")
+            
+            taskResultStore.find(taskResult.identifier) { (result, error) in
+                XCTAssertNotNil(result)
+                XCTAssertNil(error)
+                
+                if let result = result {
+                    XCTAssertEqual(result.identifier, self.taskResult.identifier)
+                }
+                
+                expectationFind?.fulfill()
+            }
+            
+            waitForExpectations(timeout: 30) { error in
+                expectationFind = nil
+            }
+        }
+        
+        do { //delete
+            weak var expectationFind = expectation(description: "Find")
+            
+            taskResultStore.removeById(taskResult.identifier) { (count, error) in
+                XCTAssertNotNil(count)
+                XCTAssertNil(error)
+                
+                if let count = count {
+                    XCTAssertEqual(count, 1)
+                }
+                
+                expectationFind?.fulfill()
+            }
+            
+            waitForExpectations(timeout: 30) { error in
+                expectationFind = nil
+            }
+        }
+        
+        do { //find
+            weak var expectationFind = expectation(description: "Find")
+            
+            taskResultStore.find(taskResult.identifier) { (result, error) in
+                XCTAssertNil(result)
+                XCTAssertNotNil(error)
+                
+                if let result = result {
+                    XCTAssertEqual(result.identifier, self.taskResult.identifier)
+                }
+                
+                expectationFind?.fulfill()
+            }
+            
+            waitForExpectations(timeout: 30) { error in
+                expectationFind = nil
+            }
         }
     }
     
-    func testSaveTaskResult() {
-        weak var expectationSave = expectation(description: "save")
-        
-        let taskResultStore = DataStore<TaskResult>.collection(.network)
-        
-        taskResultStore.save(taskRestult) { (kResult, error) in
-            XCTAssertNotNil(kResult)
-            XCTAssertNil(error)
+    func testStepResult() {
+        do { //save
+            weak var expectationSave = expectation(description: "Save")
             
-            expectationSave?.fulfill()
-        }
-        
-        waitForExpectations(timeout: 30) { error in
-            expectationSave = nil
-        }
-    }
-    
-    func testSaveStepResult() {
-        weak var expectationSave = expectation(description: "save")
-        
-        let stepResultStore = DataStore<StepResult>.collection(.network)
-        
-        stepResultStore.save(stepResult) { (kResult, error) in
-            XCTAssertNotNil(kResult)
-            XCTAssertNil(error)
+            stepResultStore.save(stepResult) { (result, error) in
+                XCTAssertNotNil(result)
+                XCTAssertNil(error)
+                
+                if let result = result {
+                    XCTAssertEqual(result.identifier, self.stepResult.identifier)
+                    
+                    XCTAssertEqual(result.firstResult?.identifier, self.taskResult.identifier)
+                }
+                
+                expectationSave?.fulfill()
+            }
             
-            expectationSave?.fulfill()
+            waitForExpectations(timeout: 30) { error in
+                expectationSave = nil
+            }
         }
         
-        waitForExpectations(timeout: 30) { error in
-            expectationSave = nil
+        do { //find
+            weak var expectationFind = expectation(description: "Find")
+            
+            taskResultStore.find(taskResult.identifier) { (result, error) in
+                XCTAssertNotNil(result)
+                XCTAssertNil(error)
+                
+                if let result = result {
+                    XCTAssertEqual(result.identifier, self.taskResult.identifier)
+                }
+                
+                expectationFind?.fulfill()
+            }
+            
+            waitForExpectations(timeout: 30) { error in
+                expectationFind = nil
+            }
+        }
+        
+        do { //find
+            weak var expectationFind = expectation(description: "Find")
+            
+            stepResultStore.find(stepResult.identifier) { (result, error) in
+                XCTAssertNotNil(result)
+                XCTAssertNil(error)
+                
+                if let result = result {
+                    XCTAssertEqual(result.identifier, self.stepResult.identifier)
+                }
+                
+                expectationFind?.fulfill()
+            }
+            
+            waitForExpectations(timeout: 30) { error in
+                expectationFind = nil
+            }
+        }
+        
+        do { //delete
+            weak var expectationRemove = expectation(description: "Remove")
+            
+            stepResultStore.removeById(stepResult.identifier) { (count, error) in
+                XCTAssertNotNil(count)
+                XCTAssertNil(error)
+                
+                if let count = count {
+                    XCTAssertEqual(count, 1)
+                }
+                
+                expectationRemove?.fulfill()
+            }
+            
+            waitForExpectations(timeout: 30) { error in
+                expectationRemove = nil
+            }
+        }
+        
+        do { //find
+            weak var expectationFind = expectation(description: "Find")
+            
+            taskResultStore.find(taskResult.identifier) { (result, error) in
+                XCTAssertNil(result)
+                XCTAssertNotNil(error)
+                
+                if let result = result {
+                    XCTAssertEqual(result.identifier, self.taskResult.identifier)
+                }
+                
+                expectationFind?.fulfill()
+            }
+            
+            waitForExpectations(timeout: 30) { error in
+                expectationFind = nil
+            }
+        }
+        
+        do { //find
+            weak var expectationFind = expectation(description: "Find")
+            
+            stepResultStore.find(stepResult.identifier) { (result, error) in
+                XCTAssertNil(result)
+                XCTAssertNotNil(error)
+                
+                if let result = result {
+                    XCTAssertEqual(result.identifier, self.taskResult.identifier)
+                }
+                
+                expectationFind?.fulfill()
+            }
+            
+            waitForExpectations(timeout: 30) { error in
+                expectationFind = nil
+            }
         }
     }
     
