@@ -1,6 +1,0 @@
-framework module PMKSystemConfiguration {
-  umbrella header "PMKSystemConfiguration.h"
-
-  export *
-  module * { export * }
-}

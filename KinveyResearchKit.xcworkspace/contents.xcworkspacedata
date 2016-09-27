@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../ios-library/Kinvey/Kinvey.xcodeproj">
+      location = "group:Carthage/Checkouts/ResearchKit/samples/ORKCatalog/ORKCatalog.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:KinveyResearchKit.xcodeproj">

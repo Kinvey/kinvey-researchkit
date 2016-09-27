@@ -1,3 +1,0 @@
-framework module PMKEventKit {
-    header "PMKEventKit-Swift.h"
-}
