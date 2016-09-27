@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57079A391D99D27A00E362C6 /* QuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57079A381D99D27A00E362C6 /* QuestionResult.swift */; };
+		57079A3B1D99D81F00E362C6 /* NumericQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57079A3A1D99D81F00E362C6 /* NumericQuestionResult.swift */; };
+		57079A3D1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57079A3C1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift */; };
 		57680BF51D94CCED0032540A /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57941F9C1D8C478900FB4387 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57680BF61D94CCF60032540A /* ResearchKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57CB09DE1D8B38A600C382BF /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57680BF71D94EA7E0032540A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9B1D8C478900FB4387 /* Realm.framework */; };
@@ -60,6 +63,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		57079A381D99D27A00E362C6 /* QuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionResult.swift; sourceTree = "<group>"; };
+		57079A3A1D99D81F00E362C6 /* NumericQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericQuestionResult.swift; sourceTree = "<group>"; };
+		57079A3C1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalQuestionResult.swift; sourceTree = "<group>"; };
 		57680BF91D94ED050032540A /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		57680BFC1D94F0080032540A /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		57680BFE1D94F5870032540A /* TaskResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskResult.swift; sourceTree = "<group>"; };
@@ -136,6 +142,9 @@
 				57680C001D94F5C60032540A /* CollectionResult.swift */,
 				57680C021D94F8050032540A /* StepResult.swift */,
 				57680BFE1D94F5870032540A /* TaskResult.swift */,
+				57079A381D99D27A00E362C6 /* QuestionResult.swift */,
+				57079A3A1D99D81F00E362C6 /* NumericQuestionResult.swift */,
+				57079A3C1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift */,
 			);
 			path = KinveyResearchKit;
 			sourceTree = "<group>";
@@ -276,9 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57079A3D1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift in Sources */,
+				57079A3B1D99D81F00E362C6 /* NumericQuestionResult.swift in Sources */,
 				57680C011D94F5C60032540A /* CollectionResult.swift in Sources */,
 				57680C0C1D95865C0032540A /* DataStore.swift in Sources */,
 				961DB3CF1D6F4C4C00202003 /* Result.swift in Sources */,
+				57079A391D99D27A00E362C6 /* QuestionResult.swift in Sources */,
 				57680C031D94F8050032540A /* StepResult.swift in Sources */,
 				57680BFF1D94F5870032540A /* TaskResult.swift in Sources */,
 				57680C081D9502020032540A /* Factory.swift in Sources */,
@@ -419,6 +431,7 @@
 				);
 				INFOPLIST_FILE = KinveyResearchKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinvey.KinveyResearchKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,6 +457,7 @@
 				);
 				INFOPLIST_FILE = KinveyResearchKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinvey.KinveyResearchKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";

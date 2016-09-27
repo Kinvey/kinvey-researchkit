@@ -13,6 +13,10 @@ func build(_ result: ORKResult) -> Result? {
         return StepResult(stepResult: stepResult)
     } else if let taskResult = result as? ORKTaskResult {
         return TaskResult(taskResult: taskResult)
+    } else if let numericQuestionResult = result as? ORKNumericQuestionResult {
+        return NumericQuestionResult(numericQuestionResult: numericQuestionResult)
+    } else if let timeIntervalQuestionResult = result as? ORKTimeIntervalQuestionResult {
+        return TimeIntervalQuestionResult(timeIntervalQuestionResult: timeIntervalQuestionResult)
     }
     return nil
 }

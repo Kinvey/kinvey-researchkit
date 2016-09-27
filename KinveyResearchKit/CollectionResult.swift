@@ -45,17 +45,19 @@ let TaskResultCollectionName = TaskResult.collectionName()
 class ResultTransformer<T: Result>: TransformType {
     
     typealias Object = T
-    typealias JSON = [String : Any]
+    typealias JSON = KinveyRef
     
-    func transformToJSON(_ value: T?) -> [String : Any]? {
+    func transformToJSON(_ value: T?) -> KinveyRef? {
         if let value = value, let identifier = value.identifier {
-            return KinveyRef(collection: T.collectionName(), _id: identifier).toJSON()
+            return KinveyRef(collection: T.collectionName(), _id: identifier)
         }
         return nil
     }
     
     func transformFromJSON(_ value: Any?) -> T? {
-        if let kinveyRef = value as? KinveyRef {
+        if let value = value as? [String : String],
+            let kinveyRef = KinveyRef(JSON: value)
+        {
             switch kinveyRef.collection {
             case StepResultCollectionName:
                 break
@@ -76,20 +78,39 @@ class ResultArrayTransformer: TransformType {
     typealias JSON = [[String : Any]]
     
     func transformFromJSON(_ value: Any?) -> Array<Result>? {
+        if let values = value as? [[String : Any]] {
+            var results = [Result]()
+            for result in values {
+                if let result = ResultTransformer<Result>().transformFromJSON(result) {
+                    results.append(result)
+                }
+            }
+            return results
+        }
         return nil
     }
     
     func transformToJSON(_ value: Array<Result>?) -> [[String : Any]]? {
         if let value = value {
-            var results = [[String : Any]]()
+            var results = [KinveyRef]()
             for result in value {
+                var kinveyRef: KinveyRef? = nil
                 if let taskResult = result as? TaskResult {
-                    if let kinveyRef = ResultTransformer<TaskResult>().transformToJSON(taskResult) {
-                        results.append(kinveyRef)
-                    }
+                    kinveyRef = ResultTransformer<TaskResult>().transformToJSON(taskResult)
+                } else if let taskResult = result as? StepResult {
+                    kinveyRef = ResultTransformer<StepResult>().transformToJSON(taskResult)
+                } else if let taskResult = result as? NumericQuestionResult {
+                    kinveyRef = ResultTransformer<NumericQuestionResult>().transformToJSON(taskResult)
+                } else if let taskResult = result as? TimeIntervalQuestionResult {
+                    kinveyRef = ResultTransformer<TimeIntervalQuestionResult>().transformToJSON(taskResult)
+                } else {
+                    kinveyRef = nil
+                }
+                if let kinveyRef = kinveyRef {
+                    results.append(kinveyRef)
                 }
             }
-            return results
+            return results.toJSON()
         }
         return nil
     }
