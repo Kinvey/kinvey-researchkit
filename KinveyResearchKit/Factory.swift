@@ -17,6 +17,14 @@ func build(_ result: ORKResult) -> Result? {
         return NumericQuestionResult(numericQuestionResult: numericQuestionResult)
     } else if let timeIntervalQuestionResult = result as? ORKTimeIntervalQuestionResult {
         return TimeIntervalQuestionResult(timeIntervalQuestionResult: timeIntervalQuestionResult)
+    } else if let booleanQuestionResult = result as? ORKBooleanQuestionResult {
+        return BooleanQuestionResult(booleanQuestionResult: booleanQuestionResult)
+    } else if let dateQuestionResult = result as? ORKDateQuestionResult {
+        return DateQuestionResult(dateQuestionResult: dateQuestionResult)
+    } else if let choiceQuestionResult = result as? ORKChoiceQuestionResult {
+        return ChoiceQuestionResult(choiceQuestionResult: choiceQuestionResult)
+    } else if let locationQuestionResult = result as? ORKLocationQuestionResult {
+        return LocationQuestionResult(locationQuestionResult: locationQuestionResult)
     }
     return nil
 }

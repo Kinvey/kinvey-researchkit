@@ -42,7 +42,7 @@ public extension DataStore {
     @discardableResult
     internal func save<CollectionResultType: ORKCollectionResult>(results: CollectionResultType, writePolicy: WritePolicy? = nil) -> Promise<[Result]> {
         var promises = [Promise<Result>]()
-        if let results = results.results {
+        if writeNestedObjectsUsingReferences, let results = results.results {
             for result in results {
                 var promise: Promise<Result>? = nil
                 if let stepResult = result as? ORKStepResult {

@@ -9,7 +9,7 @@
 import ResearchKit
 import Kinvey
 
-struct KinveyRef: Mappable {
+struct ObjectReference: Mappable {
     
     var collection: String
     var _id: String
@@ -45,18 +45,18 @@ let TaskResultCollectionName = TaskResult.collectionName()
 class ResultTransformer<T: Result>: TransformType {
     
     typealias Object = T
-    typealias JSON = KinveyRef
+    typealias JSON = ObjectReference
     
-    func transformToJSON(_ value: T?) -> KinveyRef? {
+    func transformToJSON(_ value: T?) -> ObjectReference? {
         if let value = value, let identifier = value.identifier {
-            return KinveyRef(collection: T.collectionName(), _id: identifier)
+            return ObjectReference(collection: T.collectionName(), _id: identifier)
         }
         return nil
     }
     
     func transformFromJSON(_ value: Any?) -> T? {
         if let value = value as? [String : String],
-            let kinveyRef = KinveyRef(JSON: value)
+            let kinveyRef = ObjectReference(JSON: value)
         {
             switch kinveyRef.collection {
             case StepResultCollectionName:
@@ -92,9 +92,9 @@ class ResultArrayTransformer: TransformType {
     
     func transformToJSON(_ value: Array<Result>?) -> [[String : Any]]? {
         if let value = value {
-            var results = [KinveyRef]()
+            var results = [ObjectReference]()
             for result in value {
-                var kinveyRef: KinveyRef? = nil
+                var kinveyRef: ObjectReference? = nil
                 if let taskResult = result as? TaskResult {
                     kinveyRef = ResultTransformer<TaskResult>().transformToJSON(taskResult)
                 } else if let taskResult = result as? StepResult {
@@ -134,7 +134,11 @@ open class CollectionResult: Result {
     override open func propertyMapping(_ map: Map) {
         super.propertyMapping(map)
         
-        results <- (map["results"], ResultArrayTransformer())
+        if writeNestedObjectsUsingReferences {
+            results <- (map["results"], ResultArrayTransformer())
+        } else {
+            results <- map["results"]
+        }
     }
     
 }

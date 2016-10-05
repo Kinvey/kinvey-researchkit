@@ -10,6 +10,8 @@
 		57079A391D99D27A00E362C6 /* QuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57079A381D99D27A00E362C6 /* QuestionResult.swift */; };
 		57079A3B1D99D81F00E362C6 /* NumericQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57079A3A1D99D81F00E362C6 /* NumericQuestionResult.swift */; };
 		57079A3D1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57079A3C1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift */; };
+		5765E03B1DA4BF2900A33975 /* ChoiceQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765E03A1DA4BF2900A33975 /* ChoiceQuestionResult.swift */; };
+		5765E03D1DA4C0B500A33975 /* LocationQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765E03C1DA4C0B500A33975 /* LocationQuestionResult.swift */; };
 		57680BF51D94CCED0032540A /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57941F9C1D8C478900FB4387 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		57680BF71D94EA7E0032540A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9B1D8C478900FB4387 /* Realm.framework */; };
 		57680BF81D94EA7E0032540A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9C1D8C478900FB4387 /* RealmSwift.framework */; };
@@ -23,7 +25,10 @@
 		57680C0C1D95865C0032540A /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57680C0B1D95865C0032540A /* DataStore.swift */; };
 		57941F9F1D8C47C100FB4387 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9B1D8C478900FB4387 /* Realm.framework */; };
 		57941FA01D8C47C100FB4387 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9C1D8C478900FB4387 /* RealmSwift.framework */; };
+		57942B621D9B0FEE00299BAC /* KinveyResearchKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57942B611D9B0FEE00299BAC /* KinveyResearchKit.swift */; };
 		57975BAE1D9AD80A006256ED /* Kinvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57975BAD1D9AD80A006256ED /* Kinvey.framework */; };
+		57B38C1C1DA4901E00CFB254 /* BooleanQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B38C1B1DA4901E00CFB254 /* BooleanQuestionResult.swift */; };
+		57B38C1E1DA4917600CFB254 /* DateQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B38C1D1DA4917600CFB254 /* DateQuestionResult.swift */; };
 		961DB3B81D6F451D00202003 /* KinveyResearchKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 961DB3B71D6F451D00202003 /* KinveyResearchKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		961DB3BF1D6F451D00202003 /* KinveyResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961DB3B41D6F451C00202003 /* KinveyResearchKit.framework */; };
 		961DB3C41D6F451D00202003 /* KinveyResearchKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961DB3C31D6F451D00202003 /* KinveyResearchKitTests.swift */; };
@@ -60,6 +65,8 @@
 		57079A381D99D27A00E362C6 /* QuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionResult.swift; sourceTree = "<group>"; };
 		57079A3A1D99D81F00E362C6 /* NumericQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericQuestionResult.swift; sourceTree = "<group>"; };
 		57079A3C1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalQuestionResult.swift; sourceTree = "<group>"; };
+		5765E03A1DA4BF2900A33975 /* ChoiceQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceQuestionResult.swift; sourceTree = "<group>"; };
+		5765E03C1DA4C0B500A33975 /* LocationQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationQuestionResult.swift; sourceTree = "<group>"; };
 		57680BF91D94ED050032540A /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = "<group>"; };
 		57680BFC1D94F0080032540A /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
 		57680BFE1D94F5870032540A /* TaskResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskResult.swift; sourceTree = "<group>"; };
@@ -69,7 +76,10 @@
 		57680C0B1D95865C0032540A /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		57941F9B1D8C478900FB4387 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		57941F9C1D8C478900FB4387 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		57942B611D9B0FEE00299BAC /* KinveyResearchKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyResearchKit.swift; sourceTree = "<group>"; };
 		57975BAD1D9AD80A006256ED /* Kinvey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kinvey.framework; sourceTree = "<group>"; };
+		57B38C1B1DA4901E00CFB254 /* BooleanQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooleanQuestionResult.swift; sourceTree = "<group>"; };
+		57B38C1D1DA4917600CFB254 /* DateQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateQuestionResult.swift; sourceTree = "<group>"; };
 		961DB3B41D6F451C00202003 /* KinveyResearchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KinveyResearchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		961DB3B71D6F451D00202003 /* KinveyResearchKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KinveyResearchKit.h; sourceTree = "<group>"; };
 		961DB3B91D6F451D00202003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +150,7 @@
 			children = (
 				961DB3B71D6F451D00202003 /* KinveyResearchKit.h */,
 				961DB3B91D6F451D00202003 /* Info.plist */,
+				57942B611D9B0FEE00299BAC /* KinveyResearchKit.swift */,
 				57680C0B1D95865C0032540A /* DataStore.swift */,
 				57680C071D9502020032540A /* Factory.swift */,
 				961DB3CE1D6F4C4C00202003 /* Result.swift */,
@@ -149,6 +160,10 @@
 				57079A381D99D27A00E362C6 /* QuestionResult.swift */,
 				57079A3A1D99D81F00E362C6 /* NumericQuestionResult.swift */,
 				57079A3C1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift */,
+				57B38C1B1DA4901E00CFB254 /* BooleanQuestionResult.swift */,
+				57B38C1D1DA4917600CFB254 /* DateQuestionResult.swift */,
+				5765E03A1DA4BF2900A33975 /* ChoiceQuestionResult.swift */,
+				5765E03C1DA4C0B500A33975 /* LocationQuestionResult.swift */,
 			);
 			path = KinveyResearchKit;
 			sourceTree = "<group>";
@@ -284,15 +299,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B38C1E1DA4917600CFB254 /* DateQuestionResult.swift in Sources */,
 				57079A3D1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift in Sources */,
 				57079A3B1D99D81F00E362C6 /* NumericQuestionResult.swift in Sources */,
 				57680C011D94F5C60032540A /* CollectionResult.swift in Sources */,
 				57680C0C1D95865C0032540A /* DataStore.swift in Sources */,
 				961DB3CF1D6F4C4C00202003 /* Result.swift in Sources */,
+				57942B621D9B0FEE00299BAC /* KinveyResearchKit.swift in Sources */,
 				57079A391D99D27A00E362C6 /* QuestionResult.swift in Sources */,
+				57B38C1C1DA4901E00CFB254 /* BooleanQuestionResult.swift in Sources */,
 				57680C031D94F8050032540A /* StepResult.swift in Sources */,
+				5765E03B1DA4BF2900A33975 /* ChoiceQuestionResult.swift in Sources */,
 				57680BFF1D94F5870032540A /* TaskResult.swift in Sources */,
 				57680C081D9502020032540A /* Factory.swift in Sources */,
+				5765E03D1DA4C0B500A33975 /* LocationQuestionResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
