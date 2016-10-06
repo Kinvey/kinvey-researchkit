@@ -25,6 +25,18 @@ func build(_ result: ORKResult) -> Result? {
         return ChoiceQuestionResult(choiceQuestionResult: choiceQuestionResult)
     } else if let locationQuestionResult = result as? ORKLocationQuestionResult {
         return LocationQuestionResult(locationQuestionResult: locationQuestionResult)
+    } else if let scaleQuestionResult = result as? ORKScaleQuestionResult {
+        return ScaleQuestionResult(scaleQuestionResult: scaleQuestionResult)
+    } else if let textQuestionResult = result as? ORKTextQuestionResult {
+        return TextQuestionResult(textQuestionResult: textQuestionResult)
+    } else if let timeOfDayQuestionResult = result as? ORKTimeOfDayQuestionResult {
+        return TimeOfDayQuestionResult(timeOfDayQuestionResult: timeOfDayQuestionResult)
+    } else if let fileResult = result as? ORKFileResult {
+        return FileResult(fileResult: fileResult)
+    } else if let consentSignatureResult = result as? ORKConsentSignatureResult {
+        return ConsentSignatureResult(consentSignatureResult: consentSignatureResult)
+    } else if let passcodeResult = result as? ORKPasscodeResult {
+        return PasscodeResult(passcodeResult: passcodeResult)
     }
     return nil
 }
