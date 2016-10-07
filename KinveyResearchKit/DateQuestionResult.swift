@@ -71,7 +71,7 @@ extension Calendar {
 
 extension Calendar.Identifier {
     
-    var stringValue: String? {
+    var stringValue: String {
         switch self {
         case .buddhist:
             return BuddhistCalendar
@@ -105,8 +105,6 @@ extension Calendar.Identifier {
             return PersianCalendar
         case .republicOfChina:
             return RepublicOfChinaCalendar
-        default:
-            return nil
         }
     }
     
@@ -137,7 +135,9 @@ extension TimeZone: Mappable {
     
     /// This function can be used to validate JSON prior to mapping. Return nil to cancel mapping at this point
     public init?(map: Map) {
-        guard let secondsFromGMT = map["secondsFromGMT"] as? Int else {
+        var secondsFromGMTValue: Int?
+        secondsFromGMTValue <- map["secondsFromGMT"]
+        guard let secondsFromGMT = secondsFromGMTValue else {
             return nil
         }
         self.init(secondsFromGMT: secondsFromGMT)

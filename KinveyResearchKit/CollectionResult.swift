@@ -58,8 +58,6 @@ class ResultTransformer<T: Result>: TransformType {
             let kinveyRef = ObjectReference(JSON: value)
         {
             switch kinveyRef.collection {
-            case StepResultCollectionName:
-                break
             case TaskResultCollectionName:
                 break
             default:

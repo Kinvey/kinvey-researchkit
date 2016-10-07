@@ -53,6 +53,8 @@ func build(_ result: ORKResult) -> Result? {
         return TowerOfHanoiResult(towerOfHanoiResult: towerOfHanoiResult)
     } else if let tappingIntervalResult = result as? ORKTappingIntervalResult {
         return TappingIntervalResult(tappingIntervalResult: tappingIntervalResult)
+    } else if let dataResult = result as? ORKDataResult {
+        return DataResult(dataResult: dataResult)
     }
     return nil
 }
