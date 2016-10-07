@@ -37,6 +37,22 @@ func build(_ result: ORKResult) -> Result? {
         return ConsentSignatureResult(consentSignatureResult: consentSignatureResult)
     } else if let passcodeResult = result as? ORKPasscodeResult {
         return PasscodeResult(passcodeResult: passcodeResult)
+    } else if let holePegTestResult = result as? ORKHolePegTestResult {
+        return HolePegTestResult(holePegTestResult: holePegTestResult)
+    } else if let psatResult = result as? ORKPSATResult {
+        return PSATResult(psatResult: psatResult)
+    } else if let reactionTimeResult = result as? ORKReactionTimeResult {
+        return ReactionTimeResult(reactionTimeResult: reactionTimeResult)
+    } else if let spatialSpanMemoryResult = result as? ORKSpatialSpanMemoryResult {
+        return SpatialSpanMemoryResult(spatialSpanMemoryResult: spatialSpanMemoryResult)
+    } else if let timedWalkResult = result as? ORKTimedWalkResult {
+        return TimedWalkResult(timedWalkResult: timedWalkResult)
+    } else if let toneAudiometryResult = result as? ORKToneAudiometryResult {
+        return ToneAudiometryResult(toneAudiometryResult: toneAudiometryResult)
+    } else if let towerOfHanoiResult = result as? ORKTowerOfHanoiResult {
+        return TowerOfHanoiResult(towerOfHanoiResult: towerOfHanoiResult)
+    } else if let tappingIntervalResult = result as? ORKTappingIntervalResult {
+        return TappingIntervalResult(tappingIntervalResult: tappingIntervalResult)
     }
     return nil
 }

@@ -31,7 +31,7 @@ open class Result: Entity {
     override open func propertyMapping(_ map: Map) {
         super.propertyMapping(map)
         
-        identifier <- map[PersistableIdKey]
+        identifier <- map["identifier"]
         startDate <- map["startDate"]
         endDate <- map["endDate"]
         userInfo <- map["userInfo"]

@@ -39,7 +39,6 @@ struct ObjectReference: Mappable {
     
 }
 
-let StepResultCollectionName = StepResult.collectionName()
 let TaskResultCollectionName = TaskResult.collectionName()
 
 class ResultTransformer<T: Result>: TransformType {
