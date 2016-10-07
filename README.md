@@ -20,6 +20,14 @@ Please refer to the Kinvey [DevCenter](http://devcenter.kinvey.com/) for documen
 
 * Run `ORKCatalog`.
 
+## How to use
+
+We made the following changes to the `ORKCatalog` sample. To use the SDK in your own project, you will need to make similar changes - 
+
+* Add framework dependencies to `Kinvey` and `KinveyResearchKit`
+* Add code in the `AppDelegate` to initialize Kinvey and login with user (refer to the [Getting Started](http://devcenter.kinvey.com/ios-v3.0/guides/getting-started) guide for details)
+* For every `ORKResult`, setting the `ResultViewController.result` property also saves the result to Kinvey (refer to the [Data Store](http://devcenter.kinvey.com/ios-v3.0/guides/datastore) guide for details on how to save data to Kinvey)
+
 ## License
 See [LICENSE](LICENSE) for details.
 
