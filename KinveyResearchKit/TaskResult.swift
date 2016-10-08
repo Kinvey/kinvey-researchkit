@@ -9,7 +9,7 @@
 import ResearchKit
 import Kinvey
 
-class TaskResult: CollectionResult {
+open class TaskResult: CollectionResult {
     
     dynamic var taskRunUUID: String?
     dynamic var outputDirectory: String?
@@ -21,14 +21,14 @@ class TaskResult: CollectionResult {
         outputDirectory = taskResult.outputDirectory?.absoluteString
     }
     
-    override class func collectionName() -> String {
+    override open class func collectionName() -> String {
         return "TaskResult"
     }
     
-    override func propertyMapping(_ map: Map) {
+    override open func propertyMapping(_ map: Map) {
         super.propertyMapping(map)
         
-        taskRunUUID <- map["taskRunUUID"]
+        taskRunUUID <- map[PersistableIdKey]
         outputDirectory <- map["outputDirectory"]
     }
     

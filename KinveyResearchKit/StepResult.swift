@@ -9,17 +9,17 @@
 import ResearchKit
 import Kinvey
 
-class StepResult: CollectionResult {
+open class StepResult: CollectionResult {
 
     convenience init(stepResult: ORKStepResult) {
         self.init(collectionResult: stepResult)
     }
 
-    override class func collectionName() -> String {
+    override open class func collectionName() -> String {
         return "StepResult"
     }
 
-    override func propertyMapping(_ map: Map) {
+    override open func propertyMapping(_ map: Map) {
         super.propertyMapping(map)
     }
 

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Samples/ORKCatalog/ORKCatalog.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:KinveyResearchKit.xcodeproj">
    </FileRef>
 </Workspace>

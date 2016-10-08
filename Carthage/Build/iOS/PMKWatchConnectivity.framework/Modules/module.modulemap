@@ -1,3 +1,0 @@
-framework module PMKWatchConnectivity {
-    header "PMKWatchConnectivity-Swift.h"
-}

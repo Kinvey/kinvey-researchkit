@@ -7,24 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57680BF41D94CCE60032540A /* Kinvey.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57941F991D8C477D00FB4387 /* Kinvey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57680BF51D94CCED0032540A /* RealmSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57941F9C1D8C478900FB4387 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57680BF61D94CCF60032540A /* ResearchKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57CB09DE1D8B38A600C382BF /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57680BF71D94EA7E0032540A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9B1D8C478900FB4387 /* Realm.framework */; };
-		57680BF81D94EA7E0032540A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9C1D8C478900FB4387 /* RealmSwift.framework */; };
-		57680BFA1D94ED0E0032540A /* KeychainAccess.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57680BF91D94ED050032540A /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57680BFB1D94ED190032540A /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57941F9B1D8C478900FB4387 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		57680BFD1D94F00A0032540A /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 57680BFC1D94F0080032540A /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		57079A391D99D27A00E362C6 /* QuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57079A381D99D27A00E362C6 /* QuestionResult.swift */; };
+		57079A3B1D99D81F00E362C6 /* NumericQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57079A3A1D99D81F00E362C6 /* NumericQuestionResult.swift */; };
+		57079A3D1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57079A3C1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift */; };
+		570B76B71DA57596001091DC /* ScaleQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B76B61DA57596001091DC /* ScaleQuestionResult.swift */; };
+		570B76B91DA576D1001091DC /* TextQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B76B81DA576D1001091DC /* TextQuestionResult.swift */; };
+		570B76BB1DA579CE001091DC /* TimeOfDayQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B76BA1DA579CE001091DC /* TimeOfDayQuestionResult.swift */; };
+		570B76BD1DA57C4C001091DC /* FileResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B76BC1DA57C4C001091DC /* FileResult.swift */; };
+		573FD32C1DA8DFFF007F4D10 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FD32B1DA8DFFF007F4D10 /* User.swift */; };
+		573FD32E1DA8E5CA007F4D10 /* LoginFormStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FD32D1DA8E5CA007F4D10 /* LoginFormStepViewController.swift */; };
+		573FD3301DA8E9ED007F4D10 /* LoginStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FD32F1DA8E9ED007F4D10 /* LoginStep.swift */; };
+		573FD3321DA8EA65007F4D10 /* LoginStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FD3311DA8EA65007F4D10 /* LoginStepViewController.swift */; };
+		573FD3341DA8EF78007F4D10 /* LoginFormStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FD3331DA8EF78007F4D10 /* LoginFormStep.swift */; };
+		5746E7A11DA8485000630B45 /* KinveyRegistrationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746E7A01DA8485000630B45 /* KinveyRegistrationStep.swift */; };
+		5746E7A31DA848B400630B45 /* KinveyRegistrationStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746E7A21DA848B400630B45 /* KinveyRegistrationStepViewController.swift */; };
+		5765E03B1DA4BF2900A33975 /* ChoiceQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765E03A1DA4BF2900A33975 /* ChoiceQuestionResult.swift */; };
+		5765E03D1DA4C0B500A33975 /* LocationQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765E03C1DA4C0B500A33975 /* LocationQuestionResult.swift */; };
 		57680BFF1D94F5870032540A /* TaskResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57680BFE1D94F5870032540A /* TaskResult.swift */; };
 		57680C011D94F5C60032540A /* CollectionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57680C001D94F5C60032540A /* CollectionResult.swift */; };
 		57680C031D94F8050032540A /* StepResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57680C021D94F8050032540A /* StepResult.swift */; };
 		57680C081D9502020032540A /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57680C071D9502020032540A /* Factory.swift */; };
-		57941F9A1D8C477D00FB4387 /* Kinvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F991D8C477D00FB4387 /* Kinvey.framework */; };
-		57941F9F1D8C47C100FB4387 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9B1D8C478900FB4387 /* Realm.framework */; };
-		57941FA01D8C47C100FB4387 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F9C1D8C478900FB4387 /* RealmSwift.framework */; };
-		57941FA11D8C47C100FB4387 /* Kinvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57941F991D8C477D00FB4387 /* Kinvey.framework */; };
-		57941FA21D8C47C100FB4387 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CB09DE1D8B38A600C382BF /* ResearchKit.framework */; };
-		57CB09DF1D8B38A600C382BF /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CB09DE1D8B38A600C382BF /* ResearchKit.framework */; };
+		57680C0C1D95865C0032540A /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57680C0B1D95865C0032540A /* DataStore.swift */; };
+		576A51361DA5BAF4000745D9 /* ConsentSignatureResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A51351DA5BAF4000745D9 /* ConsentSignatureResult.swift */; };
+		576A513B1DA5D575000745D9 /* PasscodeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A513A1DA5D575000745D9 /* PasscodeResult.swift */; };
+		576A51411DA6D849000745D9 /* HolePegTestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A51401DA6D849000745D9 /* HolePegTestResult.swift */; };
+		576A51431DA6EA69000745D9 /* PSATResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A51421DA6EA69000745D9 /* PSATResult.swift */; };
+		576A51451DA6EE7A000745D9 /* ReactionTimeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A51441DA6EE7A000745D9 /* ReactionTimeResult.swift */; };
+		576A51471DA6F208000745D9 /* SpatialSpanMemoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A51461DA6F208000745D9 /* SpatialSpanMemoryResult.swift */; };
+		576A51491DA728DD000745D9 /* TimedWalkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A51481DA728DD000745D9 /* TimedWalkResult.swift */; };
+		576A514B1DA72B25000745D9 /* ToneAudiometryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A514A1DA72B25000745D9 /* ToneAudiometryResult.swift */; };
+		576A514D1DA72DBE000745D9 /* TowerOfHanoiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A514C1DA72DBE000745D9 /* TowerOfHanoiResult.swift */; };
+		576A514F1DA7303E000745D9 /* TappingIntervalResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A514E1DA7303E000745D9 /* TappingIntervalResult.swift */; };
+		576A51551DA78C41000745D9 /* DataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A51541DA78C41000745D9 /* DataResult.swift */; };
+		577F2C591DA8882800956127 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577F2C541DA8882300956127 /* KeychainAccess.framework */; };
+		577F2C5B1DA8882800956127 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577F2C561DA8882300956127 /* PromiseKit.framework */; };
+		577F2C5C1DA8882800956127 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577F2C571DA8882300956127 /* Realm.framework */; };
+		577F2C5D1DA8882800956127 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577F2C581DA8882300956127 /* RealmSwift.framework */; };
+		577F2C791DA8DD4400956127 /* Kinvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577F2C781DA8DD3E00956127 /* Kinvey.framework */; };
+		57942B621D9B0FEE00299BAC /* KinveyResearchKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57942B611D9B0FEE00299BAC /* KinveyResearchKit.swift */; };
+		57B38C1C1DA4901E00CFB254 /* BooleanQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B38C1B1DA4901E00CFB254 /* BooleanQuestionResult.swift */; };
+		57B38C1E1DA4917600CFB254 /* DateQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B38C1D1DA4917600CFB254 /* DateQuestionResult.swift */; };
+		57D8A3131DA8278F00FB6603 /* KinveySignupStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8A3121DA8278F00FB6603 /* KinveySignupStepViewController.swift */; };
+		57D8A3191DA82D1D00FB6603 /* KinveySignupStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8A3181DA82D1D00FB6603 /* KinveySignupStep.swift */; };
+		57F6D2B71DA833A20095C42A /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F6D2B61DA833A20095C42A /* ResearchKit.framework */; };
 		961DB3B81D6F451D00202003 /* KinveyResearchKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 961DB3B71D6F451D00202003 /* KinveyResearchKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		961DB3BF1D6F451D00202003 /* KinveyResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961DB3B41D6F451C00202003 /* KinveyResearchKit.framework */; };
 		961DB3C41D6F451D00202003 /* KinveyResearchKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961DB3C31D6F451D00202003 /* KinveyResearchKitTests.swift */; };
@@ -48,28 +73,55 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				57680BF61D94CCF60032540A /* ResearchKit.framework in CopyFiles */,
-				57680BF41D94CCE60032540A /* Kinvey.framework in CopyFiles */,
-				57680BF51D94CCED0032540A /* RealmSwift.framework in CopyFiles */,
-				57680BFB1D94ED190032540A /* Realm.framework in CopyFiles */,
-				57680BFA1D94ED0E0032540A /* KeychainAccess.framework in CopyFiles */,
-				57680BFD1D94F00A0032540A /* PromiseKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		57680BF91D94ED050032540A /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
-		57680BFC1D94F0080032540A /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		57079A381D99D27A00E362C6 /* QuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionResult.swift; sourceTree = "<group>"; };
+		57079A3A1D99D81F00E362C6 /* NumericQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericQuestionResult.swift; sourceTree = "<group>"; };
+		57079A3C1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalQuestionResult.swift; sourceTree = "<group>"; };
+		570B76B61DA57596001091DC /* ScaleQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleQuestionResult.swift; sourceTree = "<group>"; };
+		570B76B81DA576D1001091DC /* TextQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextQuestionResult.swift; sourceTree = "<group>"; };
+		570B76BA1DA579CE001091DC /* TimeOfDayQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeOfDayQuestionResult.swift; sourceTree = "<group>"; };
+		570B76BC1DA57C4C001091DC /* FileResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileResult.swift; sourceTree = "<group>"; };
+		573FD32B1DA8DFFF007F4D10 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		573FD32D1DA8E5CA007F4D10 /* LoginFormStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormStepViewController.swift; sourceTree = "<group>"; };
+		573FD32F1DA8E9ED007F4D10 /* LoginStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStep.swift; sourceTree = "<group>"; };
+		573FD3311DA8EA65007F4D10 /* LoginStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStepViewController.swift; sourceTree = "<group>"; };
+		573FD3331DA8EF78007F4D10 /* LoginFormStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormStep.swift; sourceTree = "<group>"; };
+		5746E7A01DA8485000630B45 /* KinveyRegistrationStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyRegistrationStep.swift; sourceTree = "<group>"; };
+		5746E7A21DA848B400630B45 /* KinveyRegistrationStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyRegistrationStepViewController.swift; sourceTree = "<group>"; };
+		5765E03A1DA4BF2900A33975 /* ChoiceQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceQuestionResult.swift; sourceTree = "<group>"; };
+		5765E03C1DA4C0B500A33975 /* LocationQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationQuestionResult.swift; sourceTree = "<group>"; };
 		57680BFE1D94F5870032540A /* TaskResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskResult.swift; sourceTree = "<group>"; };
 		57680C001D94F5C60032540A /* CollectionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionResult.swift; sourceTree = "<group>"; };
 		57680C021D94F8050032540A /* StepResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepResult.swift; sourceTree = "<group>"; };
 		57680C071D9502020032540A /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
-		57941F991D8C477D00FB4387 /* Kinvey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kinvey.framework; path = Carthage/Build/iOS/Kinvey.framework; sourceTree = "<group>"; };
-		57941F9B1D8C478900FB4387 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		57941F9C1D8C478900FB4387 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		57CB09DE1D8B38A600C382BF /* ResearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ResearchKit.framework; path = Carthage/Build/iOS/ResearchKit.framework; sourceTree = "<group>"; };
+		57680C0B1D95865C0032540A /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		576A51351DA5BAF4000745D9 /* ConsentSignatureResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentSignatureResult.swift; sourceTree = "<group>"; };
+		576A513A1DA5D575000745D9 /* PasscodeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeResult.swift; sourceTree = "<group>"; };
+		576A51401DA6D849000745D9 /* HolePegTestResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HolePegTestResult.swift; sourceTree = "<group>"; };
+		576A51421DA6EA69000745D9 /* PSATResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSATResult.swift; sourceTree = "<group>"; };
+		576A51441DA6EE7A000745D9 /* ReactionTimeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionTimeResult.swift; sourceTree = "<group>"; };
+		576A51461DA6F208000745D9 /* SpatialSpanMemoryResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpatialSpanMemoryResult.swift; sourceTree = "<group>"; };
+		576A51481DA728DD000745D9 /* TimedWalkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimedWalkResult.swift; sourceTree = "<group>"; };
+		576A514A1DA72B25000745D9 /* ToneAudiometryResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToneAudiometryResult.swift; sourceTree = "<group>"; };
+		576A514C1DA72DBE000745D9 /* TowerOfHanoiResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TowerOfHanoiResult.swift; sourceTree = "<group>"; };
+		576A514E1DA7303E000745D9 /* TappingIntervalResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TappingIntervalResult.swift; sourceTree = "<group>"; };
+		576A51541DA78C41000745D9 /* DataResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataResult.swift; sourceTree = "<group>"; };
+		577F2C541DA8882300956127 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = "<group>"; };
+		577F2C561DA8882300956127 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
+		577F2C571DA8882300956127 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		577F2C581DA8882300956127 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		577F2C781DA8DD3E00956127 /* Kinvey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kinvey.framework; sourceTree = "<group>"; };
+		57942B611D9B0FEE00299BAC /* KinveyResearchKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyResearchKit.swift; sourceTree = "<group>"; };
+		57B38C1B1DA4901E00CFB254 /* BooleanQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooleanQuestionResult.swift; sourceTree = "<group>"; };
+		57B38C1D1DA4917600CFB254 /* DateQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateQuestionResult.swift; sourceTree = "<group>"; };
+		57D8A3121DA8278F00FB6603 /* KinveySignupStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveySignupStepViewController.swift; sourceTree = "<group>"; };
+		57D8A3181DA82D1D00FB6603 /* KinveySignupStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveySignupStep.swift; sourceTree = "<group>"; };
+		57F6D2B61DA833A20095C42A /* ResearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ResearchKit.framework; path = Carthage/Build/iOS/ResearchKit.framework; sourceTree = "<group>"; };
 		961DB3B41D6F451C00202003 /* KinveyResearchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KinveyResearchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		961DB3B71D6F451D00202003 /* KinveyResearchKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KinveyResearchKit.h; sourceTree = "<group>"; };
 		961DB3B91D6F451D00202003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,10 +136,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57941F9A1D8C477D00FB4387 /* Kinvey.framework in Frameworks */,
-				57CB09DF1D8B38A600C382BF /* ResearchKit.framework in Frameworks */,
-				57680BF71D94EA7E0032540A /* Realm.framework in Frameworks */,
-				57680BF81D94EA7E0032540A /* RealmSwift.framework in Frameworks */,
+				577F2C791DA8DD4400956127 /* Kinvey.framework in Frameworks */,
+				577F2C591DA8882800956127 /* KeychainAccess.framework in Frameworks */,
+				577F2C5D1DA8882800956127 /* RealmSwift.framework in Frameworks */,
+				57F6D2B71DA833A20095C42A /* ResearchKit.framework in Frameworks */,
+				577F2C5B1DA8882800956127 /* PromiseKit.framework in Frameworks */,
+				577F2C5C1DA8882800956127 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,17 +149,81 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57941F9F1D8C47C100FB4387 /* Realm.framework in Frameworks */,
 				961DB3BF1D6F451D00202003 /* KinveyResearchKit.framework in Frameworks */,
-				57941FA11D8C47C100FB4387 /* Kinvey.framework in Frameworks */,
-				57941FA01D8C47C100FB4387 /* RealmSwift.framework in Frameworks */,
-				57941FA21D8C47C100FB4387 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57975BAF1D9ADA5D006256ED /* Kinvey */ = {
+			isa = PBXGroup;
+			children = (
+				577F2C541DA8882300956127 /* KeychainAccess.framework */,
+				577F2C781DA8DD3E00956127 /* Kinvey.framework */,
+				577F2C561DA8882300956127 /* PromiseKit.framework */,
+				577F2C571DA8882300956127 /* Realm.framework */,
+				577F2C581DA8882300956127 /* RealmSwift.framework */,
+			);
+			name = Kinvey;
+			path = "Kinvey-3.3.1";
+			sourceTree = "<group>";
+		};
+		57D8A30F1DA8275400FB6603 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				5746E7A01DA8485000630B45 /* KinveyRegistrationStep.swift */,
+				57D8A3181DA82D1D00FB6603 /* KinveySignupStep.swift */,
+				573FD3331DA8EF78007F4D10 /* LoginFormStep.swift */,
+				573FD32F1DA8E9ED007F4D10 /* LoginStep.swift */,
+			);
+			name = Steps;
+			sourceTree = "<group>";
+		};
+		57D8A3101DA8276100FB6603 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				961DB3CE1D6F4C4C00202003 /* Result.swift */,
+				57680C001D94F5C60032540A /* CollectionResult.swift */,
+				57680C021D94F8050032540A /* StepResult.swift */,
+				57680BFE1D94F5870032540A /* TaskResult.swift */,
+				576A51351DA5BAF4000745D9 /* ConsentSignatureResult.swift */,
+				576A51541DA78C41000745D9 /* DataResult.swift */,
+				570B76BC1DA57C4C001091DC /* FileResult.swift */,
+				576A51401DA6D849000745D9 /* HolePegTestResult.swift */,
+				576A51421DA6EA69000745D9 /* PSATResult.swift */,
+				576A513A1DA5D575000745D9 /* PasscodeResult.swift */,
+				57079A381D99D27A00E362C6 /* QuestionResult.swift */,
+				57B38C1B1DA4901E00CFB254 /* BooleanQuestionResult.swift */,
+				5765E03A1DA4BF2900A33975 /* ChoiceQuestionResult.swift */,
+				57B38C1D1DA4917600CFB254 /* DateQuestionResult.swift */,
+				5765E03C1DA4C0B500A33975 /* LocationQuestionResult.swift */,
+				57079A3A1D99D81F00E362C6 /* NumericQuestionResult.swift */,
+				570B76B61DA57596001091DC /* ScaleQuestionResult.swift */,
+				570B76B81DA576D1001091DC /* TextQuestionResult.swift */,
+				57079A3C1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift */,
+				570B76BA1DA579CE001091DC /* TimeOfDayQuestionResult.swift */,
+				576A51441DA6EE7A000745D9 /* ReactionTimeResult.swift */,
+				576A51461DA6F208000745D9 /* SpatialSpanMemoryResult.swift */,
+				576A514E1DA7303E000745D9 /* TappingIntervalResult.swift */,
+				576A51481DA728DD000745D9 /* TimedWalkResult.swift */,
+				576A514A1DA72B25000745D9 /* ToneAudiometryResult.swift */,
+				576A514C1DA72DBE000745D9 /* TowerOfHanoiResult.swift */,
+			);
+			name = Results;
+			sourceTree = "<group>";
+		};
+		57D8A3111DA8277800FB6603 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5746E7A21DA848B400630B45 /* KinveyRegistrationStepViewController.swift */,
+				57D8A3121DA8278F00FB6603 /* KinveySignupStepViewController.swift */,
+				573FD32D1DA8E5CA007F4D10 /* LoginFormStepViewController.swift */,
+				573FD3311DA8EA65007F4D10 /* LoginStepViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		961DB3AA1D6F451C00202003 = {
 			isa = PBXGroup;
 			children = (
@@ -128,13 +246,15 @@
 		961DB3B61D6F451D00202003 /* KinveyResearchKit */ = {
 			isa = PBXGroup;
 			children = (
+				57D8A3101DA8276100FB6603 /* Results */,
+				57D8A30F1DA8275400FB6603 /* Steps */,
+				57D8A3111DA8277800FB6603 /* ViewControllers */,
 				961DB3B71D6F451D00202003 /* KinveyResearchKit.h */,
 				961DB3B91D6F451D00202003 /* Info.plist */,
+				57942B611D9B0FEE00299BAC /* KinveyResearchKit.swift */,
+				57680C0B1D95865C0032540A /* DataStore.swift */,
 				57680C071D9502020032540A /* Factory.swift */,
-				961DB3CE1D6F4C4C00202003 /* Result.swift */,
-				57680C001D94F5C60032540A /* CollectionResult.swift */,
-				57680C021D94F8050032540A /* StepResult.swift */,
-				57680BFE1D94F5870032540A /* TaskResult.swift */,
+				573FD32B1DA8DFFF007F4D10 /* User.swift */,
 			);
 			path = KinveyResearchKit;
 			sourceTree = "<group>";
@@ -151,12 +271,8 @@
 		968706ED53EA6A18FB2ADAB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				57680BFC1D94F0080032540A /* PromiseKit.framework */,
-				57680BF91D94ED050032540A /* KeychainAccess.framework */,
-				57941F9B1D8C478900FB4387 /* Realm.framework */,
-				57941F9C1D8C478900FB4387 /* RealmSwift.framework */,
-				57941F991D8C477D00FB4387 /* Kinvey.framework */,
-				57CB09DE1D8B38A600C382BF /* ResearchKit.framework */,
+				57F6D2B61DA833A20095C42A /* ResearchKit.framework */,
+				57975BAF1D9ADA5D006256ED /* Kinvey */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -275,11 +391,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				576A513B1DA5D575000745D9 /* PasscodeResult.swift in Sources */,
+				576A51361DA5BAF4000745D9 /* ConsentSignatureResult.swift in Sources */,
+				576A51411DA6D849000745D9 /* HolePegTestResult.swift in Sources */,
+				57B38C1E1DA4917600CFB254 /* DateQuestionResult.swift in Sources */,
+				5746E7A11DA8485000630B45 /* KinveyRegistrationStep.swift in Sources */,
+				57079A3D1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift in Sources */,
+				57D8A3131DA8278F00FB6603 /* KinveySignupStepViewController.swift in Sources */,
+				576A51551DA78C41000745D9 /* DataResult.swift in Sources */,
+				57079A3B1D99D81F00E362C6 /* NumericQuestionResult.swift in Sources */,
+				5746E7A31DA848B400630B45 /* KinveyRegistrationStepViewController.swift in Sources */,
 				57680C011D94F5C60032540A /* CollectionResult.swift in Sources */,
+				573FD32E1DA8E5CA007F4D10 /* LoginFormStepViewController.swift in Sources */,
+				576A51451DA6EE7A000745D9 /* ReactionTimeResult.swift in Sources */,
+				573FD3321DA8EA65007F4D10 /* LoginStepViewController.swift in Sources */,
+				57680C0C1D95865C0032540A /* DataStore.swift in Sources */,
+				576A51431DA6EA69000745D9 /* PSATResult.swift in Sources */,
+				576A51491DA728DD000745D9 /* TimedWalkResult.swift in Sources */,
 				961DB3CF1D6F4C4C00202003 /* Result.swift in Sources */,
+				57942B621D9B0FEE00299BAC /* KinveyResearchKit.swift in Sources */,
+				576A514F1DA7303E000745D9 /* TappingIntervalResult.swift in Sources */,
+				57079A391D99D27A00E362C6 /* QuestionResult.swift in Sources */,
+				570B76BD1DA57C4C001091DC /* FileResult.swift in Sources */,
+				57B38C1C1DA4901E00CFB254 /* BooleanQuestionResult.swift in Sources */,
 				57680C031D94F8050032540A /* StepResult.swift in Sources */,
+				57D8A3191DA82D1D00FB6603 /* KinveySignupStep.swift in Sources */,
+				573FD3341DA8EF78007F4D10 /* LoginFormStep.swift in Sources */,
+				576A51471DA6F208000745D9 /* SpatialSpanMemoryResult.swift in Sources */,
+				573FD32C1DA8DFFF007F4D10 /* User.swift in Sources */,
+				5765E03B1DA4BF2900A33975 /* ChoiceQuestionResult.swift in Sources */,
 				57680BFF1D94F5870032540A /* TaskResult.swift in Sources */,
+				570B76B71DA57596001091DC /* ScaleQuestionResult.swift in Sources */,
+				576A514B1DA72B25000745D9 /* ToneAudiometryResult.swift in Sources */,
 				57680C081D9502020032540A /* Factory.swift in Sources */,
+				570B76BB1DA579CE001091DC /* TimeOfDayQuestionResult.swift in Sources */,
+				5765E03D1DA4C0B500A33975 /* LocationQuestionResult.swift in Sources */,
+				576A514D1DA72DBE000745D9 /* TowerOfHanoiResult.swift in Sources */,
+				570B76B91DA576D1001091DC /* TextQuestionResult.swift in Sources */,
+				573FD3301DA8E9ED007F4D10 /* LoginStep.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +493,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -414,14 +562,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Kinvey-3.3.1",
 				);
 				INFOPLIST_FILE = KinveyResearchKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinvey.KinveyResearchKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -439,13 +590,16 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Kinvey-3.3.1",
 				);
 				INFOPLIST_FILE = KinveyResearchKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinvey.KinveyResearchKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

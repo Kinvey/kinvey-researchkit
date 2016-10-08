@@ -1,3 +1,0 @@
-framework module PMKAddressBook {
-    header "PMKAddressBook-Swift.h"
-}
