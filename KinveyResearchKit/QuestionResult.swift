@@ -11,7 +11,7 @@ import Kinvey
 
 public enum QuestionType: Int {
     
-    case none, scale, singleChoice, multipleChoice, decimal, integer, boolean, text, timeOfDay, dateAndTime, date, timeInterval, location
+    case none, scale, singleChoice, multipleChoice, decimal, integer, boolean, text, timeOfDay, dateAndTime, date, timeInterval, height, location
     
     var stringValue: String {
         switch self {
@@ -39,6 +39,8 @@ public enum QuestionType: Int {
                 return "Date"
             case .timeInterval:
                 return "TimeInterval"
+            case .height:
+                return "Height"
             case .location:
                 return "Location"
         }
@@ -70,6 +72,8 @@ public enum QuestionType: Int {
                 return QuestionType.date
             case .timeInterval:
                 return QuestionType.timeInterval
+            case .height:
+                return QuestionType.height
             case .location:
                 return QuestionType.location
         }

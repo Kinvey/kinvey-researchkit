@@ -168,12 +168,13 @@ SWIFT_CLASS("_TtC6Kinvey3Acl")
 @class __KNVUser;
 @class KNVPush;
 @class KNVMigration;
+@class NSCoder;
 
 /**
   This class provides a representation of a Kinvey environment holding App ID and App Secret. Please <em>never</em> use a Master Secret in a client application.
 */
 SWIFT_CLASS_NAMED("Client")
-@interface __KNVClient : NSObject
+@interface __KNVClient : NSObject <NSCoding>
 /**
   Shared client instance for simplicity. Use this instance if <em>you don’t need</em> to handle with multiple Kinvey environments.
 */
@@ -302,6 +303,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
   \endcode.
 */
 @property (nonatomic, readonly, copy) NSString * _Nullable authorizationHeader;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder;
+- (void)encodeWithCoder:(NSCoder * _Nonnull)aCoder;
 @end
 
 @protocol KNVRequest;
