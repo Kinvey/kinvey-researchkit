@@ -20,6 +20,8 @@ Please refer to the Kinvey [DevCenter](http://devcenter.kinvey.com/) for documen
 
 * Run `ORKCatalog`.
 
+* Before run other operations, run either `Account Creation` or `Login` (inside `Onboarding` section) in order to have an active user which allows you to save data in Kinvey's backend
+
 ## How to use
 
 We made the following changes to the `ORKCatalog` sample. To use the SDK in your own project, you will need to make similar changes - 
