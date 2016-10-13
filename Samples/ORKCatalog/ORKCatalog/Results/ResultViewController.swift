@@ -30,7 +30,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import UIKit
 import ResearchKit
-
+import KinveyResearchKit
+import Kinvey
 /**
     The purpose of this view controller is to show you the kinds of data
     you can fetch from a specific `ORKResult`. The intention is for this view
@@ -46,8 +47,18 @@ class ResultViewController: UITableViewController {
     }
     
     // MARK: Properties
+    lazy var resultStore = DataStore<TaskResult>.collection(.network)
 
-    var result: ORKResult? = ORKTaskResult()
+    var result: ORKResult? = ORKTaskResult() {
+        didSet {
+            if let taskResult = result as? ORKTaskResult {
+                resultStore.save(taskResult) { savedResult, error in
+                    print("saved the result to Kinvey")
+                }
+            }
+            
+        }
+    }
 
     var currentResult: ORKResult? = ORKTaskResult()
 
