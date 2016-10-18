@@ -7,7 +7,7 @@ Please refer to the Kinvey [DevCenter](http://devcenter.kinvey.com/) for documen
 
 ## Prerequisites
 * iOS 9 or later
-* XCode 8 or above
+* XCode 8 or above, Swift 2.3 or Swift 3
 * Kinvey app ID and secret. If you have not created a Kinvey app yet, create one [here](https://console.kinvey.com).
 
 ## Getting Started
