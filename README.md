@@ -14,7 +14,7 @@ Please refer to the Kinvey [DevCenter](http://devcenter.kinvey.com/) for documen
 
 * Open `KinveyResearchKit.workspace`. The workspace contains two projects:
     * `KinveyResearchKit` - is a wrapper SDK that exposes classes to back ResearchKit objects with a Kinvey backend.
-    * `ORKCatalog` - is a fork of the ResearchKit [sample (https://github.com/ResearchKit/ResearchKit/tree/master/samples/ORKCatalog), that shows how to use `KinveyResearchKit` in your app.
+    * `ORKCatalog` - is a fork of the ResearchKit [sample](https://github.com/ResearchKit/ResearchKit/tree/master/samples/ORKCatalog), that shows how to use `KinveyResearchKit` in your app.
 
 * Replace `myAppKey` and `myAppSecret` in the `AppDelegate` of `ORKCatalog` with values you obtain from [Kinvey](https://console.kinvey.com).
 
