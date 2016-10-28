@@ -47,7 +47,7 @@ class ResultViewController: UITableViewController {
     }
     
     // MARK: Properties
-    lazy var resultStore = DataStore<TaskResult>.collection(.cache)
+    lazy var resultStore = DataStore<TaskResult>.collection(.network)
 
     var result: ORKResult? = ORKTaskResult() {
         didSet {
