@@ -47,13 +47,18 @@ class ResultViewController: UITableViewController {
     }
     
     // MARK: Properties
-    lazy var resultStore = DataStore<TaskResult>.collection(.network)
+    lazy var resultStore = DataStore<TaskResult>.collection(.cache)
 
     var result: ORKResult? = ORKTaskResult() {
         didSet {
+            precondition((Kinvey.sharedClient.activeUser != nil), "To save data, you must be a logged in. Please log in a user before saving.")
             if let taskResult = result as? ORKTaskResult {
                 resultStore.save(taskResult) { savedResult, error in
-                    print("saved the result to Kinvey")
+                    if let _ = savedResult {
+                        print ("Saved the result to Kinvey")
+                    } else if let _ = error {
+                        print ("Could not save to Kinvey, reason: " + error.debugDescription)
+                    }
                 }
             }
             
