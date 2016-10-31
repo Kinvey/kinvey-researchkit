@@ -8,33 +8,46 @@
 
 import ResearchKit
 import Kinvey
+import PromiseKit
 
-struct ObjectReference: Mappable {
+class ObjectReference: Mappable {
     
     var collection: String
-    var _id: String
+    var id: String
     
-    public init(collection: String, _id: String) {
+    init(collection: String, id: String = UUID().uuidString) {
         self.collection = collection
-        self._id = _id
+        self.id = id
     }
     
-    public init?(map: Map) {
+    required init?(map: Map) {
         guard
             let collection = map["collection"].currentValue as? String,
-            let _id = map["_id"].currentValue as? String
+            let id = map["_id"].currentValue as? String
         else {
             return nil
         }
         
         self.collection = collection
-        self._id = _id
+        self.id = id
     }
     
     /// This function is where all variable mappings should occur. It is executed by Mapper during the mapping (serialization and deserialization) process.
-    public mutating func mapping(map: Map) {
+    func mapping(map: Map) {
         collection <- map["collection"]
-        _id <- map["_id"]
+        id <- map["_id"]
+    }
+    
+}
+
+class FileReference: ObjectReference {
+    
+    init(id: String = UUID().uuidString) {
+        super.init(collection: "_blob", id: id)
+    }
+    
+    required init?(map: Map) {
+        super.init(map: map)
     }
     
 }
@@ -48,7 +61,7 @@ class ResultTransformer<T: Result>: TransformType {
     
     func transformToJSON(_ value: T?) -> ObjectReference? {
         if let value = value, let identifier = value.identifier {
-            return ObjectReference(collection: T.collectionName(), _id: identifier)
+            return ObjectReference(collection: T.collectionName(), id: identifier)
         }
         return nil
     }
@@ -135,6 +148,20 @@ open class CollectionResult: Result {
             results <- (map["results"], ResultArrayTransformer())
         } else {
             results <- map["results"]
+        }
+    }
+    
+    override func saveReferences() -> Promise<[ObjectReference]> {
+        return Promise<[ObjectReference]> { fulfill, reject in
+            var promises = [Promise<[ObjectReference]>]()
+            if let results = results {
+                for result in results {
+                    promises.append(result.saveReferences())
+                }
+            }
+            when(fulfilled: promises).then { references in
+                fulfill(references.flatMap { $0 })
+            }
         }
     }
     

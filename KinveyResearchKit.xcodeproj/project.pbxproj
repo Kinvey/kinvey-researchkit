@@ -21,6 +21,7 @@
 		573FD3341DA8EF78007F4D10 /* LoginFormStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FD3331DA8EF78007F4D10 /* LoginFormStep.swift */; };
 		5746E7A11DA8485000630B45 /* KinveyRegistrationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746E7A01DA8485000630B45 /* KinveyRegistrationStep.swift */; };
 		5746E7A31DA848B400630B45 /* KinveyRegistrationStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746E7A21DA848B400630B45 /* KinveyRegistrationStepViewController.swift */; };
+		576501D31DC7EAF400898F15 /* Kinvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576501D21DC7EAF400898F15 /* Kinvey.framework */; };
 		5765E03B1DA4BF2900A33975 /* ChoiceQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765E03A1DA4BF2900A33975 /* ChoiceQuestionResult.swift */; };
 		5765E03D1DA4C0B500A33975 /* LocationQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765E03C1DA4C0B500A33975 /* LocationQuestionResult.swift */; };
 		57680BFF1D94F5870032540A /* TaskResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57680BFE1D94F5870032540A /* TaskResult.swift */; };
@@ -39,11 +40,6 @@
 		576A514D1DA72DBE000745D9 /* TowerOfHanoiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A514C1DA72DBE000745D9 /* TowerOfHanoiResult.swift */; };
 		576A514F1DA7303E000745D9 /* TappingIntervalResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A514E1DA7303E000745D9 /* TappingIntervalResult.swift */; };
 		576A51551DA78C41000745D9 /* DataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A51541DA78C41000745D9 /* DataResult.swift */; };
-		577F2C591DA8882800956127 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577F2C541DA8882300956127 /* KeychainAccess.framework */; };
-		577F2C5B1DA8882800956127 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577F2C561DA8882300956127 /* PromiseKit.framework */; };
-		577F2C5C1DA8882800956127 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577F2C571DA8882300956127 /* Realm.framework */; };
-		577F2C5D1DA8882800956127 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577F2C581DA8882300956127 /* RealmSwift.framework */; };
-		577F2C791DA8DD4400956127 /* Kinvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577F2C781DA8DD3E00956127 /* Kinvey.framework */; };
 		57942B621D9B0FEE00299BAC /* KinveyResearchKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57942B611D9B0FEE00299BAC /* KinveyResearchKit.swift */; };
 		57B38C1C1DA4901E00CFB254 /* BooleanQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B38C1B1DA4901E00CFB254 /* BooleanQuestionResult.swift */; };
 		57B38C1E1DA4917600CFB254 /* DateQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B38C1D1DA4917600CFB254 /* DateQuestionResult.swift */; };
@@ -93,6 +89,7 @@
 		573FD3331DA8EF78007F4D10 /* LoginFormStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormStep.swift; sourceTree = "<group>"; };
 		5746E7A01DA8485000630B45 /* KinveyRegistrationStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyRegistrationStep.swift; sourceTree = "<group>"; };
 		5746E7A21DA848B400630B45 /* KinveyRegistrationStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyRegistrationStepViewController.swift; sourceTree = "<group>"; };
+		576501D21DC7EAF400898F15 /* Kinvey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kinvey.framework; path = Carthage/Build/iOS/Kinvey.framework; sourceTree = "<group>"; };
 		5765E03A1DA4BF2900A33975 /* ChoiceQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceQuestionResult.swift; sourceTree = "<group>"; };
 		5765E03C1DA4C0B500A33975 /* LocationQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationQuestionResult.swift; sourceTree = "<group>"; };
 		57680BFE1D94F5870032540A /* TaskResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskResult.swift; sourceTree = "<group>"; };
@@ -111,11 +108,6 @@
 		576A514C1DA72DBE000745D9 /* TowerOfHanoiResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TowerOfHanoiResult.swift; sourceTree = "<group>"; };
 		576A514E1DA7303E000745D9 /* TappingIntervalResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TappingIntervalResult.swift; sourceTree = "<group>"; };
 		576A51541DA78C41000745D9 /* DataResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataResult.swift; sourceTree = "<group>"; };
-		577F2C541DA8882300956127 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = "<group>"; };
-		577F2C561DA8882300956127 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
-		577F2C571DA8882300956127 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		577F2C581DA8882300956127 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		577F2C781DA8DD3E00956127 /* Kinvey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kinvey.framework; sourceTree = "<group>"; };
 		57942B611D9B0FEE00299BAC /* KinveyResearchKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyResearchKit.swift; sourceTree = "<group>"; };
 		57B38C1B1DA4901E00CFB254 /* BooleanQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooleanQuestionResult.swift; sourceTree = "<group>"; };
 		57B38C1D1DA4917600CFB254 /* DateQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateQuestionResult.swift; sourceTree = "<group>"; };
@@ -136,12 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				577F2C791DA8DD4400956127 /* Kinvey.framework in Frameworks */,
-				577F2C591DA8882800956127 /* KeychainAccess.framework in Frameworks */,
-				577F2C5D1DA8882800956127 /* RealmSwift.framework in Frameworks */,
+				576501D31DC7EAF400898F15 /* Kinvey.framework in Frameworks */,
 				57F6D2B71DA833A20095C42A /* ResearchKit.framework in Frameworks */,
-				577F2C5B1DA8882800956127 /* PromiseKit.framework in Frameworks */,
-				577F2C5C1DA8882800956127 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,19 +144,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		57975BAF1D9ADA5D006256ED /* Kinvey */ = {
-			isa = PBXGroup;
-			children = (
-				577F2C541DA8882300956127 /* KeychainAccess.framework */,
-				577F2C781DA8DD3E00956127 /* Kinvey.framework */,
-				577F2C561DA8882300956127 /* PromiseKit.framework */,
-				577F2C571DA8882300956127 /* Realm.framework */,
-				577F2C581DA8882300956127 /* RealmSwift.framework */,
-			);
-			name = Kinvey;
-			path = "Kinvey-3.3.1";
-			sourceTree = "<group>";
-		};
 		57D8A30F1DA8275400FB6603 /* Steps */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,8 +246,8 @@
 		968706ED53EA6A18FB2ADAB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				576501D21DC7EAF400898F15 /* Kinvey.framework */,
 				57F6D2B61DA833A20095C42A /* ResearchKit.framework */,
-				57975BAF1D9ADA5D006256ED /* Kinvey */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -335,7 +310,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Kinvey;
 				TargetAttributes = {
 					961DB3B31D6F451C00202003 = {
@@ -493,6 +468,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -553,7 +529,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5W7CYNR7UE;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -581,7 +557,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5W7CYNR7UE;
 				DYLIB_COMPATIBILITY_VERSION = 1;

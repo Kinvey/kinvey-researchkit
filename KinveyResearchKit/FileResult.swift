@@ -8,6 +8,7 @@
 
 import ResearchKit
 import Kinvey
+import PromiseKit
 
 class URLBase64Transform: TransformType {
     
@@ -69,6 +70,8 @@ open class FileResult: Result {
     dynamic var contentType: String?
     dynamic var fileURL: URL?
     
+    private var fileReference: FileReference?
+    
     convenience init(fileResult: ORKFileResult) {
         self.init(result: fileResult)
         
@@ -83,25 +86,26 @@ open class FileResult: Result {
     override open func propertyMapping(_ map: Map) {
         super.propertyMapping(map)
         
-        self.contentType <- map["contentType"]
-        var contentType: String? = nil
-        switch map.mappingType {
-        case .toJSON:
-            contentType = self.contentType
-        case .fromJSON:
-            var value: String? = nil
-            value <- map["contentType"]
-            contentType = value
-        }
-        if let contentType = contentType {
-            switch contentType {
-            case "plain/text", "application/json":
-                fileURL <- (map["fileURL"], URLContentStringTransform(contentType: contentType))
-            default:
-                fileURL <- (map["fileURL"], URLBase64Transform(contentType: contentType))
+        fileReference <- map["reference"]
+    }
+    
+    override func saveReferences() -> Promise<[ObjectReference]> {
+        return Promise<[ObjectReference]> { fulfill, reject in
+            if let fileURL = fileURL {
+                FileStore.getInstance().upload(File(), path: fileURL.path) { file, error in
+                    if let file = file, let fileId = file.fileId {
+                        let fileReference = FileReference(id: fileId)
+                        self.fileReference = fileReference
+                        fulfill([fileReference])
+                    } else if let error = error {
+                        reject(error)
+                    } else {
+                        reject(Kinvey.Error.invalidResponse)
+                    }
+                }
+            } else {
+                fulfill([])
             }
-        } else {
-            fileURL <- (map["fileURL"], URLBase64Transform(contentType: contentType))
         }
     }
     

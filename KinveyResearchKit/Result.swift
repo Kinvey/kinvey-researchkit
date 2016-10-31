@@ -9,6 +9,7 @@
 import ResearchKit
 import Kinvey
 import RealmSwift
+import PromiseKit
 
 open class Result: Entity {
     
@@ -36,6 +37,12 @@ open class Result: Entity {
         endDate <- map["endDate"]
         userInfo <- map["userInfo"]
         saveable.value <- map["saveable"]
+    }
+    
+    internal func saveReferences() -> Promise<[ObjectReference]> {
+        return Promise<[ObjectReference]> { fulfill, reject in
+            fulfill([])
+        }
     }
     
 }
