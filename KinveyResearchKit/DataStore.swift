@@ -110,10 +110,12 @@ public extension DataStore where T: TaskResult {
     public func save(_ persistable: ORKTaskResult, writePolicy: WritePolicy? = nil, completionHandler: ObjectCompletionHandler?) -> Request {
         let promise = save(results: persistable, writePolicy: writePolicy).then { results -> Promise<TaskResult?> in
             let taskResult = TaskResult(taskResult: persistable)
-            return Promise<TaskResult?> { fulfill, reject in
-                self.save(taskResult as! T, writePolicy: writePolicy) { stepResult, error in
-                    fulfill(stepResult)
-                    completionHandler?(stepResult, error)
+            return taskResult.saveReferences().then { _ in
+                return Promise<TaskResult?> { fulfill, reject in
+                    self.save(taskResult as! T, writePolicy: writePolicy) { stepResult, error in
+                        fulfill(stepResult)
+                        completionHandler?(stepResult, error)
+                    }
                 }
             }
         }

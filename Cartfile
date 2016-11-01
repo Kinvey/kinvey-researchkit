@@ -1,1 +1,2 @@
 github "ResearchKit/ResearchKit" "master"
+github "Kinvey/ios-library" ~> 3.3
