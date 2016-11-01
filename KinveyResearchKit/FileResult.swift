@@ -92,7 +92,10 @@ open class FileResult: Result {
     override func saveReferences() -> Promise<[ObjectReference]> {
         return Promise<[ObjectReference]> { fulfill, reject in
             if let fileURL = fileURL {
-                FileStore.getInstance().upload(File(), path: fileURL.path) { file, error in
+                let file = File()
+                file.mimeType = contentType
+                file.fileName = fileURL.lastPathComponent
+                FileStore.getInstance().upload(file, path: fileURL.path) { file, error in
                     if let file = file, let fileId = file.fileId {
                         let fileReference = FileReference(id: fileId)
                         self.fileReference = fileReference
