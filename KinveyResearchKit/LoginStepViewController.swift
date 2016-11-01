@@ -19,9 +19,9 @@ open class LoginStepViewController: ORKWaitStepViewController {
         if let results = loginStep.loginStepResult?.results {
             for result in results {
                 switch result.identifier {
-                case "ORKLoginFormItemEmail":
+                case ORKLoginFormItemIdentifierEmail:
                     email = (result as? ORKTextQuestionResult)?.textAnswer
-                case "ORKLoginFormItemPassword":
+                case ORKLoginFormItemIdentifierPassword:
                     password = (result as? ORKTextQuestionResult)?.textAnswer
                 default:
                     break

@@ -40,6 +40,8 @@
 		576A514D1DA72DBE000745D9 /* TowerOfHanoiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A514C1DA72DBE000745D9 /* TowerOfHanoiResult.swift */; };
 		576A514F1DA7303E000745D9 /* TappingIntervalResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A514E1DA7303E000745D9 /* TappingIntervalResult.swift */; };
 		576A51551DA78C41000745D9 /* DataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A51541DA78C41000745D9 /* DataResult.swift */; };
+		578832111DC90BA000E53F29 /* KinveyVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578832101DC90BA000E53F29 /* KinveyVerificationViewController.swift */; };
+		578832131DC90FD300E53F29 /* KinveyVerificationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578832121DC90FD300E53F29 /* KinveyVerificationStep.swift */; };
 		57942B621D9B0FEE00299BAC /* KinveyResearchKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57942B611D9B0FEE00299BAC /* KinveyResearchKit.swift */; };
 		57B38C1C1DA4901E00CFB254 /* BooleanQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B38C1B1DA4901E00CFB254 /* BooleanQuestionResult.swift */; };
 		57B38C1E1DA4917600CFB254 /* DateQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B38C1D1DA4917600CFB254 /* DateQuestionResult.swift */; };
@@ -108,6 +110,8 @@
 		576A514C1DA72DBE000745D9 /* TowerOfHanoiResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TowerOfHanoiResult.swift; sourceTree = "<group>"; };
 		576A514E1DA7303E000745D9 /* TappingIntervalResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TappingIntervalResult.swift; sourceTree = "<group>"; };
 		576A51541DA78C41000745D9 /* DataResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataResult.swift; sourceTree = "<group>"; };
+		578832101DC90BA000E53F29 /* KinveyVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyVerificationViewController.swift; sourceTree = "<group>"; };
+		578832121DC90FD300E53F29 /* KinveyVerificationStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyVerificationStep.swift; sourceTree = "<group>"; };
 		57942B611D9B0FEE00299BAC /* KinveyResearchKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinveyResearchKit.swift; sourceTree = "<group>"; };
 		57B38C1B1DA4901E00CFB254 /* BooleanQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooleanQuestionResult.swift; sourceTree = "<group>"; };
 		57B38C1D1DA4917600CFB254 /* DateQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateQuestionResult.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				57D8A3181DA82D1D00FB6603 /* KinveySignupStep.swift */,
 				573FD3331DA8EF78007F4D10 /* LoginFormStep.swift */,
 				573FD32F1DA8E9ED007F4D10 /* LoginStep.swift */,
+				578832121DC90FD300E53F29 /* KinveyVerificationStep.swift */,
 			);
 			name = Steps;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				57D8A3121DA8278F00FB6603 /* KinveySignupStepViewController.swift */,
 				573FD32D1DA8E5CA007F4D10 /* LoginFormStepViewController.swift */,
 				573FD3311DA8EA65007F4D10 /* LoginStepViewController.swift */,
+				578832101DC90BA000E53F29 /* KinveyVerificationViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -370,12 +376,14 @@
 				576A51361DA5BAF4000745D9 /* ConsentSignatureResult.swift in Sources */,
 				576A51411DA6D849000745D9 /* HolePegTestResult.swift in Sources */,
 				57B38C1E1DA4917600CFB254 /* DateQuestionResult.swift in Sources */,
+				578832131DC90FD300E53F29 /* KinveyVerificationStep.swift in Sources */,
 				5746E7A11DA8485000630B45 /* KinveyRegistrationStep.swift in Sources */,
 				57079A3D1D99DE8900E362C6 /* TimeIntervalQuestionResult.swift in Sources */,
 				57D8A3131DA8278F00FB6603 /* KinveySignupStepViewController.swift in Sources */,
 				576A51551DA78C41000745D9 /* DataResult.swift in Sources */,
 				57079A3B1D99D81F00E362C6 /* NumericQuestionResult.swift in Sources */,
 				5746E7A31DA848B400630B45 /* KinveyRegistrationStepViewController.swift in Sources */,
+				578832111DC90BA000E53F29 /* KinveyVerificationViewController.swift in Sources */,
 				57680C011D94F5C60032540A /* CollectionResult.swift in Sources */,
 				573FD32E1DA8E5CA007F4D10 /* LoginFormStepViewController.swift in Sources */,
 				576A51451DA6EE7A000745D9 /* ReactionTimeResult.swift in Sources */,
