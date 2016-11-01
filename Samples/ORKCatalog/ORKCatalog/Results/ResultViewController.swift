@@ -51,7 +51,7 @@ class ResultViewController: UITableViewController {
 
     var result: ORKResult? = ORKTaskResult() {
         didSet {
-            precondition((Kinvey.sharedClient.activeUser != nil), "To save data, you must be a logged in. Please  sign up or log in a user before saving running either 'Account Creation' or 'Login' (inside 'Onboarding' section) in order to have an active user which allows you to save data in Kinvey's backend.")
+            precondition((Kinvey.sharedClient.activeUser != nil), "To save data, you must be a logged in. Please sign up or log in a user before saving running either 'Account Creation' or 'Login' (inside 'Onboarding' section) in order to have an active user which allows you to save data in Kinvey's backend.")
             if let taskResult = result as? ORKTaskResult {
                 resultStore.save(taskResult) { savedResult, error in
                     if let _ = savedResult {
