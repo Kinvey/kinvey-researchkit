@@ -30,17 +30,17 @@ open class KinveySignupStepViewController: ORKWaitStepViewController {
         if let results = registrationStepResult?.results {
             for result in results {
                 switch result.identifier {
-                case "ORKRegistrationFormItemEmail":
+                case ORKRegistrationFormItemIdentifierEmail:
                     email = (result as? ORKTextQuestionResult)?.textAnswer
-                case "ORKRegistrationFormItemPassword":
+                case ORKRegistrationFormItemIdentifierPassword:
                     password = (result as? ORKTextQuestionResult)?.textAnswer
-                case "ORKRegistrationFormItemGivenName":
+                case ORKRegistrationFormItemIdentifierGivenName:
                     givenName = (result as? ORKTextQuestionResult)?.textAnswer
-                case "ORKRegistrationFormItemFamilyName":
+                case ORKRegistrationFormItemIdentifierFamilyName:
                     familyName = (result as? ORKTextQuestionResult)?.textAnswer
-                case "ORKRegistrationFormItemGender":
+                case ORKRegistrationFormItemIdentifierGender:
                     gender = (result as? ORKChoiceQuestionResult)?.choiceAnswers?.first as? String
-                case "ORKRegistrationFormItemDOB":
+                case ORKRegistrationFormItemIdentifierDOB:
                     dateOfBirth = (result as? ORKDateQuestionResult)?.dateAnswer
                 default:
                     break

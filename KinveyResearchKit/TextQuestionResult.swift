@@ -16,7 +16,13 @@ open class TextQuestionResult: QuestionResult {
     convenience init(textQuestionResult: ORKTextQuestionResult) {
         self.init(questionResult: textQuestionResult)
         
-        textAnswer = textQuestionResult.textAnswer
+        switch textQuestionResult.identifier {
+            case ORKLoginFormItemIdentifierPassword: break
+            case ORKRegistrationFormItemIdentifierPassword: break
+            case "ORKRegistrationFormItemConfirmPassword": break
+            default:
+                textAnswer = textQuestionResult.textAnswer
+        }
     }
     
     override open class func collectionName() -> String {

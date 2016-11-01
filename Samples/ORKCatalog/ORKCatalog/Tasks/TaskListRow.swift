@@ -1146,7 +1146,8 @@ enum TaskListRow: Int, CustomStringConvertible {
             }
         }
         
-        let verificationStep = ORKVerificationStep(identifier: String(describing:Identifier.verificationStep), text: exampleDetailText, verificationViewControllerClass: VerificationViewController.self)
+        let verificationStep = KinveyVerificationStep(identifier: String(describing:Identifier.verificationStep), text: exampleDetailText)
+        verificationStep.registrationStep = registrationStep
         
         return ORKOrderedTask(identifier: String(describing:Identifier.accountCreationTask), steps: [
             registrationStep,
