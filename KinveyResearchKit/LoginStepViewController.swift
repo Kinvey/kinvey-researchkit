@@ -46,7 +46,7 @@ open class LoginStepViewController: ORKWaitStepViewController {
         }
         
         User.login(username: email, password: password) { user, error in
-            if let user = user {
+            if user != nil {
                 self.goForward()
             } else if let error = error {
                 let alertTitle = NSLocalizedString("Login Error", comment: "")

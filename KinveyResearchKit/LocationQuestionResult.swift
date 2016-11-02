@@ -35,8 +35,13 @@ extension CLLocationCoordinate2D: Mappable {
     
     /// This function can be used to validate JSON prior to mapping. Return nil to cancel mapping at this point
     public init?(map: Map) {
-        guard let _ = map["latitude"] as? CLLocationDegrees,
-            let _ = map["longitude"] as? CLLocationDegrees else {
+        var latitude: CLLocationDegrees?
+        var longitude: CLLocationDegrees?
+        
+        latitude <- map["latitude"]
+        longitude <- map["longitude"]
+        
+        guard latitude != nil, longitude != nil else {
             return nil
         }
         self.init()
