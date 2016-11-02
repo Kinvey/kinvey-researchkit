@@ -159,7 +159,7 @@ open class CollectionResult: Result {
                     promises.append(result.saveReferences())
                 }
             }
-            when(fulfilled: promises).then { references in
+            let _ = when(fulfilled: promises).then { references in
                 fulfill(references.flatMap { $0 })
             }
         }
