@@ -53,7 +53,7 @@ public extension DataStore {
                             } else if let error = error {
                                 reject(error)
                             } else {
-                                reject(Kinvey.Error.invalidResponse)
+                                reject(Kinvey.Error.invalidResponse(httpResponse: nil, data: nil))
                             }
                         }
                     }
@@ -65,7 +65,7 @@ public extension DataStore {
                             } else if let error = error {
                                 reject(error)
                             } else {
-                                reject(Kinvey.Error.invalidResponse)
+                                reject(Kinvey.Error.invalidResponse(httpResponse: nil, data: nil))
                             }
                         }
                     }
@@ -77,7 +77,7 @@ public extension DataStore {
                             } else if let error = error {
                                 reject(error)
                             } else {
-                                reject(Kinvey.Error.invalidResponse)
+                                reject(Kinvey.Error.invalidResponse(httpResponse: nil, data: nil))
                             }
                         }
                     }
@@ -89,7 +89,7 @@ public extension DataStore {
                             } else if let error = error {
                                 reject(error)
                             } else {
-                                reject(Kinvey.Error.invalidResponse)
+                                reject(Kinvey.Error.invalidResponse(httpResponse: nil, data: nil))
                             }
                         }
                     }

@@ -8,6 +8,7 @@
 
 import ResearchKit
 import Kinvey
+import ObjectMapper
 
 extension CGPoint: StaticMappable {
     

@@ -7,6 +7,7 @@
 //
 
 import Kinvey
+import ObjectMapper
 
 open class User: Kinvey.User {
     

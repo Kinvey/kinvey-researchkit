@@ -8,6 +8,7 @@
 
 import ResearchKit
 import Kinvey
+import ObjectMapper
 
 extension ORKHolePegTestSample: StaticMappable {
     /// This is function that can be used to:

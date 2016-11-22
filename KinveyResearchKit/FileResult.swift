@@ -9,6 +9,7 @@
 import ResearchKit
 import Kinvey
 import PromiseKit
+import ObjectMapper
 
 class URLBase64Transform: TransformType {
     
@@ -103,7 +104,7 @@ open class FileResult: Result {
                     } else if let error = error {
                         reject(error)
                     } else {
-                        reject(Kinvey.Error.invalidResponse)
+                        reject(Kinvey.Error.invalidResponse(httpResponse: nil, data: nil))
                     }
                 }
             } else {

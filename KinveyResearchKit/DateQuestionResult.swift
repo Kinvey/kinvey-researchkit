@@ -8,6 +8,7 @@
 
 import ResearchKit
 import Kinvey
+import ObjectMapper
 
 fileprivate let BuddhistCalendar = "Buddhist"
 fileprivate let ChineseCalendar = "Chinese"
