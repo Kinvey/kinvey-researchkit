@@ -11,6 +11,8 @@
 		3E39B9FE1ABF683700C2ABE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E39B9FC1ABF683700C2ABE5 /* LaunchScreen.xib */; };
 		3E39BA001ABF683F00C2ABE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E39B9FF1ABF683F00C2ABE5 /* Images.xcassets */; };
 		3ED967B81AC13D37007E2D83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3ED967BA1AC13D37007E2D83 /* Localizable.strings */; };
+		571AF6811E1F32370002DB84 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 571AF6801E1F32300002DB84 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		571AF6831E1F325E0002DB84 /* XCGLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 571AF6821E1F325C0002DB84 /* XCGLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		576501D51DC7EBE900898F15 /* KinveyResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576501D41DC7EBE900898F15 /* KinveyResearchKit.framework */; };
 		576501D61DC7EBE900898F15 /* KinveyResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 576501D41DC7EBE900898F15 /* KinveyResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		576501D91DC7EC3500898F15 /* Kinvey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576501D71DC7EC1800898F15 /* Kinvey.framework */; };
@@ -46,6 +48,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				571AF6831E1F325E0002DB84 /* XCGLogger.framework in Embed Frameworks */,
+				571AF6811E1F32370002DB84 /* ObjectMapper.framework in Embed Frameworks */,
 				576501E61DC7EC8700898F15 /* PromiseKit.framework in Embed Frameworks */,
 				576501E31DC7EC6B00898F15 /* KeychainAccess.framework in Embed Frameworks */,
 				576501DE1DC7EC5200898F15 /* Realm.framework in Embed Frameworks */,
@@ -103,6 +107,8 @@
 		3E39B9FD1ABF683700C2ABE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3E39B9FF1ABF683F00C2ABE5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3ED967B91AC13D37007E2D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		571AF6801E1F32300002DB84 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = ../../Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		571AF6821E1F325C0002DB84 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = ../../Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		576501D41DC7EBE900898F15 /* KinveyResearchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KinveyResearchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		576501D71DC7EC1800898F15 /* Kinvey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kinvey.framework; path = ../../Carthage/Build/iOS/Kinvey.framework; sourceTree = "<group>"; };
 		576501DB1DC7EC4F00898F15 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../../Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -219,6 +225,8 @@
 		BC2A3C9E1C58E81500DA64B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				571AF6821E1F325C0002DB84 /* XCGLogger.framework */,
+				571AF6801E1F32300002DB84 /* ObjectMapper.framework */,
 				576501E41DC7EC8400898F15 /* PromiseKit.framework */,
 				576501E11DC7EC6800898F15 /* KeychainAccess.framework */,
 				576501DB1DC7EC4F00898F15 /* Realm.framework */,
@@ -539,7 +547,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.researchkit-samplecode.ORKCatalog-Kinvey";
 				PRODUCT_NAME = ORKCatalog;
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -561,7 +569,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.researchkit-samplecode.ORKCatalog-Kinvey";
 				PRODUCT_NAME = ORKCatalog;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

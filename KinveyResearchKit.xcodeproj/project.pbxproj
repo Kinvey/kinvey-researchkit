@@ -14,6 +14,7 @@
 		570B76B91DA576D1001091DC /* TextQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B76B81DA576D1001091DC /* TextQuestionResult.swift */; };
 		570B76BB1DA579CE001091DC /* TimeOfDayQuestionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B76BA1DA579CE001091DC /* TimeOfDayQuestionResult.swift */; };
 		570B76BD1DA57C4C001091DC /* FileResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570B76BC1DA57C4C001091DC /* FileResult.swift */; };
+		571AF67F1E1F307F0002DB84 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571AF67E1E1F307F0002DB84 /* ObjectMapper.framework */; };
 		573FD32C1DA8DFFF007F4D10 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FD32B1DA8DFFF007F4D10 /* User.swift */; };
 		573FD32E1DA8E5CA007F4D10 /* LoginFormStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FD32D1DA8E5CA007F4D10 /* LoginFormStepViewController.swift */; };
 		573FD3301DA8E9ED007F4D10 /* LoginStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573FD32F1DA8E9ED007F4D10 /* LoginStep.swift */; };
@@ -84,6 +85,7 @@
 		570B76B81DA576D1001091DC /* TextQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextQuestionResult.swift; sourceTree = "<group>"; };
 		570B76BA1DA579CE001091DC /* TimeOfDayQuestionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeOfDayQuestionResult.swift; sourceTree = "<group>"; };
 		570B76BC1DA57C4C001091DC /* FileResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileResult.swift; sourceTree = "<group>"; };
+		571AF67E1E1F307F0002DB84 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		573FD32B1DA8DFFF007F4D10 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		573FD32D1DA8E5CA007F4D10 /* LoginFormStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormStepViewController.swift; sourceTree = "<group>"; };
 		573FD32F1DA8E9ED007F4D10 /* LoginStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStep.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				571AF67F1E1F307F0002DB84 /* ObjectMapper.framework in Frameworks */,
 				576501D31DC7EAF400898F15 /* Kinvey.framework in Frameworks */,
 				57F6D2B71DA833A20095C42A /* ResearchKit.framework in Frameworks */,
 			);
@@ -254,6 +257,7 @@
 			children = (
 				576501D21DC7EAF400898F15 /* Kinvey.framework */,
 				57F6D2B61DA833A20095C42A /* ResearchKit.framework */,
+				571AF67E1E1F307F0002DB84 /* ObjectMapper.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -479,7 +483,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -524,7 +528,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -555,6 +559,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -580,6 +585,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinvey.KinveyResearchKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

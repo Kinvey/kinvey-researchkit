@@ -10,6 +10,7 @@ import ResearchKit
 import Kinvey
 import RealmSwift
 import PromiseKit
+import ObjectMapper
 
 open class Result: Entity {
     

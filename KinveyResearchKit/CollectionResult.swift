@@ -9,6 +9,7 @@
 import ResearchKit
 import Kinvey
 import PromiseKit
+import ObjectMapper
 
 class ObjectReference: Mappable {
     

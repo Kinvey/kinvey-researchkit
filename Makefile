@@ -1,3 +1,15 @@
-all:
-	cd Carthage/Checkouts/ios-library/Kinvey/Carthage/Checkouts/PromiseKit/Extensions; \
-	ls -A | awk '{system("cd " $$1 "; pwd; carthage bootstrap")}'
+all: build
+
+clean:
+	rm -Rf Carthage
+
+checkout:
+	carthage checkout --no-use-binaries
+
+build-only:
+	xcodebuild -workspace KinveyResearchKit.xcworkspace -scheme KinveyResearchKit
+
+build: checkout build-ios
+
+build-ios:
+	carthage build --no-skip-current --platform ios
