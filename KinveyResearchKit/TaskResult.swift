@@ -29,7 +29,7 @@ open class TaskResult: CollectionResult {
     override open func propertyMapping(_ map: Map) {
         super.propertyMapping(map)
         
-        taskRunUUID <- map[PersistableIdKey]
+        taskRunUUID <- map["taskRunUUID"]
         outputDirectory <- map["outputDirectory"]
     }
     
