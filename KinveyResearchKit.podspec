@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KinveyResearchKit"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "ResearchKit wrapper for Kinvey"
 
   # This description is used to generate tags and improve search results.
@@ -89,11 +89,15 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "KinveyResearchKit/**/*.{h,m}"
-  # s.exclude_files = "Classes/Exclude"
+  s.source_files  = "KinveyResearchKit/**/*.{swift,h,m}"
+  s.exclude_files = "KinveyResearchKit/User.swift"
 
   # s.public_header_files = "Classes/**/*.h"
 
+  s.prepare_command = <<-CMD
+  	sed 's/class User/class KinveyResearchKitUser/g' KinveyResearchKit/User.swift > KinveyResearchKit/KinveyResearchKitUser.swift
+	echo 'public typealias User = KinveyResearchKitUser' >> KinveyResearchKit/KinveyResearchKitUser.swift
+  CMD
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -131,7 +135,7 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "Kinvey", "~> 3.0"
+  s.dependency "Kinvey", "~> 3.5"
   s.dependency "ResearchKit", "~> 1.4"
 
 end

@@ -47,67 +47,67 @@ public enum QuestionType: Int {
         }
     }
     
-    static func build(_ questionType: ORKQuestionType) -> QuestionType {
+    init(_ questionType: ORKQuestionType) {
         switch questionType {
             case .none:
-                return QuestionType.none
+                self = .none
             case .scale:
-                return QuestionType.scale
+                self = .scale
             case .singleChoice:
-                return QuestionType.singleChoice
+                self = .singleChoice
             case .multipleChoice:
-                return QuestionType.multipleChoice
+                self = .multipleChoice
             case .decimal:
-                return QuestionType.decimal
+                self = .decimal
             case .integer:
-                return QuestionType.integer
+                self = .integer
             case .boolean:
-                return QuestionType.boolean
+                self = .boolean
             case .text:
-                return QuestionType.text
+                self = .text
             case .timeOfDay:
-                return QuestionType.timeOfDay
+                self = .timeOfDay
             case .dateAndTime:
-                return QuestionType.dateAndTime
+                self = .dateAndTime
             case .date:
-                return QuestionType.date
+                self = .date
             case .timeInterval:
-                return QuestionType.timeInterval
+                self = .timeInterval
             case .height:
-                return QuestionType.height
+                self = .height
             case .location:
-                return QuestionType.location
+                self = .location
         }
     }
     
-    static func build(_ questionType: String) -> QuestionType? {
+    init?(_ questionType: String) {
         switch questionType {
             case "None":
-                return QuestionType.none
+                self = .none
             case "Scale":
-                return QuestionType.scale
+                self = .scale
             case "SingleChoice":
-                return QuestionType.singleChoice
+                self = .singleChoice
             case "MultipleChoice":
-                return QuestionType.multipleChoice
+                self = .multipleChoice
             case "Decimal":
-                return QuestionType.decimal
+                self = .decimal
             case "Integer":
-                return QuestionType.integer
+                self = .integer
             case "Boolean":
-                return QuestionType.boolean
+                self = .boolean
             case "Text":
-                return QuestionType.text
+                self = .text
             case "TimeOfDay":
-                return QuestionType.timeOfDay
+                self = .timeOfDay
             case "DateAndTime":
-                return QuestionType.dateAndTime
+                self = .dateAndTime
             case "Date":
-                return QuestionType.date
+                self = .date
             case "TimeInterval":
-                return QuestionType.timeInterval
+                self = .timeInterval
             case "Location":
-                return QuestionType.location
+                self = .location
             default:
                 return nil
         }
@@ -122,7 +122,7 @@ class QuestionTypeTransformer: TransformType {
     
     func transformFromJSON(_ value: Any?) -> Object? {
         if let value = value as? String {
-            return QuestionType.build(value)
+            return QuestionType(value)
         }
         return nil
     }
@@ -151,7 +151,7 @@ open class QuestionResult: Result {
     convenience init(questionResult: ORKQuestionResult) {
         self.init(result: questionResult)
         
-        questionType = QuestionType.build(questionResult.questionType)
+        questionType = QuestionType(questionResult.questionType)
     }
     
     override open func propertyMapping(_ map: Map) {

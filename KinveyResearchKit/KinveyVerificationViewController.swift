@@ -17,11 +17,20 @@ open class KinveyVerificationViewController : ORKVerificationStepViewController 
     
     override open func resendEmailButtonTapped() {
         if let user = verificationStep.client.activeUser {
-            user.sendEmailConfirmation(verificationStep.client) { error in
-                if let completionHandler = self.verificationStep.completionHandler {
-                    completionHandler(self, error)
-                } else if error == nil {
-                    self.goForward()
+            user.sendEmailConfirmation(verificationStep.client) { result in
+                switch result {
+                case .success:
+                    if let completionHandler = self.verificationStep.completionHandler {
+                        completionHandler(self, nil)
+                    } else {
+                        self.goForward()
+                    }
+                case .failure(let error):
+                    if let completionHandler = self.verificationStep.completionHandler {
+                        completionHandler(self, error)
+                    } else {
+                        self.goForward()
+                    }
                 }
             }
         }

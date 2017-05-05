@@ -20,7 +20,7 @@ open class KinveySignupStep: ORKWaitStep {
     }
     
     public required init(coder aDecoder: NSCoder) {
-        client = aDecoder.decodeObject(of: Client.self, forKey: "client")!
+        client = aDecoder.decodeObject(forKey: "client") as! Client
         super.init(coder: aDecoder)
     }
     
