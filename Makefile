@@ -13,3 +13,6 @@ build: checkout build-ios
 
 build-ios:
 	carthage build --no-skip-current --platform ios
+
+deploy-cocoapods:
+	pod trunk push KinveyResearchKit.podspec --verbose --allow-warnings
