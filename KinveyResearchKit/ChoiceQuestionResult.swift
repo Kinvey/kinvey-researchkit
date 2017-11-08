@@ -12,7 +12,7 @@ import ObjectMapper
 
 open class ChoiceQuestionResult: QuestionResult {
     
-    dynamic var choiceAnswers: [Any]?
+    @objc dynamic var choiceAnswers: [Any]?
     
     convenience init(choiceQuestionResult: ORKChoiceQuestionResult) {
         self.init(questionResult: choiceQuestionResult)

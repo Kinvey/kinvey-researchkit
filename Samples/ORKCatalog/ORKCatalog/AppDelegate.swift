@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         
         Kinvey.sharedClient.logNetworkEnabled = true
-        Kinvey.sharedClient.userType = KinveyResearchKit.User.self
+        Kinvey.sharedClient.userType = KinveyResearchKit.KinveyUser.self
         Kinvey.sharedClient.initialize(appKey: "myAppKey", appSecret: "myAppSecret")
         
         // When a task result has been finished, update the result view controller's task result.

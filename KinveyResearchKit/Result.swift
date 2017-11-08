@@ -14,10 +14,10 @@ import ObjectMapper
 
 open class Result: Entity {
     
-    dynamic var identifier: String?
-    dynamic var startDate: Date?
-    dynamic var endDate: Date?
-    dynamic var userInfo: [AnyHashable : Any]?
+    @objc dynamic var identifier: String?
+    @objc dynamic var startDate: Date?
+    @objc dynamic var endDate: Date?
+    @objc dynamic var userInfo: [AnyHashable : Any]?
     let saveable = RealmOptional<Bool>()
     
     internal convenience init(result: ORKResult) {

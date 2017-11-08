@@ -12,7 +12,7 @@ import ObjectMapper
 
 open class ScaleQuestionResult: QuestionResult {
     
-    dynamic var scaleAnswer: NSNumber?
+    @objc dynamic var scaleAnswer: NSNumber?
     
     convenience init(scaleQuestionResult: ORKScaleQuestionResult) {
         self.init(questionResult: scaleQuestionResult)

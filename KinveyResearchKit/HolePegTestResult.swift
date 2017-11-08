@@ -64,16 +64,16 @@ class BodySagittalTransform: TransformType {
 
 open class HolePegTestResult: Result {
     
-    dynamic var movingDirection: ORKBodySagittal = .left
-    dynamic var dominantHandTested: Bool = false
-    dynamic var numberOfPegs: Int = 0
-    dynamic var threshold: Double = 0
-    dynamic var rotated: Bool = false
-    dynamic var totalSuccesses: Int = 0
-    dynamic var totalFailures: Int = 0
-    dynamic var totalTime: TimeInterval = 0
-    dynamic var totalDistance: Double = 0
-    dynamic var samples: [ORKHolePegTestSample]?
+    @objc dynamic var movingDirection: ORKBodySagittal = .left
+    @objc dynamic var dominantHandTested: Bool = false
+    @objc dynamic var numberOfPegs: Int = 0
+    @objc dynamic var threshold: Double = 0
+    @objc dynamic var rotated: Bool = false
+    @objc dynamic var totalSuccesses: Int = 0
+    @objc dynamic var totalFailures: Int = 0
+    @objc dynamic var totalTime: TimeInterval = 0
+    @objc dynamic var totalDistance: Double = 0
+    @objc dynamic var samples: [ORKHolePegTestSample]?
     
     convenience init(holePegTestResult: ORKHolePegTestResult) {
         self.init(result: holePegTestResult)

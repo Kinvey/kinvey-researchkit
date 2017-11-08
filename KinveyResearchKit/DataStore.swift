@@ -124,7 +124,12 @@ public extension DataStore where T: TaskResult {
             let taskResult = TaskResult(taskResult: persistable)
             return taskResult.saveReferences().then { _ in
                 return Promise<TaskResult?> { fulfill, reject in
-                    self.save(taskResult as! T, writePolicy: writePolicy) { (result: Kinvey.Result<T, Swift.Error>) in
+                    self.save(
+                        taskResult as! T,
+                        options: Options(
+                            writePolicy: writePolicy
+                        )
+                    ) { (result: Kinvey.Result<T, Swift.Error>) in
                         switch result {
                         case .success(let stepResult):
                             fulfill(stepResult)
@@ -160,7 +165,12 @@ public extension DataStore where T: StepResult {
         let promise = save(results: persistable, writePolicy: writePolicy).then { results -> Promise<StepResult?> in
             let stepResult = StepResult(stepResult: persistable)
             return Promise<StepResult?> { fulfill, reject in
-                self.save(stepResult as! T, writePolicy: writePolicy) { (result: Kinvey.Result<T, Swift.Error>) in
+                self.save(
+                    stepResult as! T,
+                    options: Options(
+                        writePolicy: writePolicy
+                    )
+                ) { (result: Kinvey.Result<T, Swift.Error>) in
                     switch result {
                     case .success(let stepResult):
                         fulfill(stepResult)
@@ -193,7 +203,13 @@ public extension DataStore where T: NumericQuestionResult {
     @discardableResult
     public func save(_ persistable: ORKNumericQuestionResult, writePolicy: WritePolicy? = nil, completionHandler: ((Kinvey.Result<T, Swift.Error>) -> Void)?) -> Request {
         let numericQuestionResult = NumericQuestionResult(numericQuestionResult: persistable)
-        return save(numericQuestionResult as! T, writePolicy: writePolicy, completionHandler: completionHandler)
+        return save(
+            numericQuestionResult as! T,
+            options: Options(
+                writePolicy: writePolicy
+            ),
+            completionHandler: completionHandler
+        )
     }
     
 }
@@ -215,7 +231,13 @@ public extension DataStore where T: TimeIntervalQuestionResult {
     @discardableResult
     public func save(_ persistable: ORKTimeIntervalQuestionResult, writePolicy: WritePolicy? = nil, completionHandler: ((Kinvey.Result<T, Swift.Error>) -> Void)?) -> Request {
         let timeIntervalQuestionResult = TimeIntervalQuestionResult(timeIntervalQuestionResult: persistable)
-        return save(timeIntervalQuestionResult as! T, writePolicy: writePolicy, completionHandler: completionHandler)
+        return save(
+            timeIntervalQuestionResult as! T,
+            options: Options(
+                writePolicy: writePolicy
+            ),
+            completionHandler: completionHandler
+        )
     }
     
 }

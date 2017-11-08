@@ -12,71 +12,75 @@ import ObjectMapper
 
 public enum QuestionType: Int {
     
-    case none, scale, singleChoice, multipleChoice, decimal, integer, boolean, text, timeOfDay, dateAndTime, date, timeInterval, height, location
+    case none, scale, singleChoice, multipleChoice, decimal, integer, boolean, text, timeOfDay, dateAndTime, date, timeInterval, height, location, multiplePicker
     
     var stringValue: String {
         switch self {
-            case .none:
-                return "None"
-            case .scale:
-                return "Scale"
-            case .singleChoice:
-                return "SingleChoice"
-            case .multipleChoice:
-                return "MultipleChoice"
-            case .decimal:
-                return "Decimal"
-            case .integer:
-                return "Integer"
-            case .boolean:
-                return "Boolean"
-            case .text:
-                return "Text"
-            case .timeOfDay:
-                return "TimeOfDay"
-            case .dateAndTime:
-                return "DateAndTime"
-            case .date:
-                return "Date"
-            case .timeInterval:
-                return "TimeInterval"
-            case .height:
-                return "Height"
-            case .location:
-                return "Location"
+        case .none:
+            return "None"
+        case .scale:
+            return "Scale"
+        case .singleChoice:
+            return "SingleChoice"
+        case .multipleChoice:
+            return "MultipleChoice"
+        case .decimal:
+            return "Decimal"
+        case .integer:
+            return "Integer"
+        case .boolean:
+            return "Boolean"
+        case .text:
+            return "Text"
+        case .timeOfDay:
+            return "TimeOfDay"
+        case .dateAndTime:
+            return "DateAndTime"
+        case .date:
+            return "Date"
+        case .timeInterval:
+            return "TimeInterval"
+        case .height:
+            return "Height"
+        case .location:
+            return "Location"
+        case .multiplePicker:
+            return "MultiplePicker"
         }
     }
     
     init(_ questionType: ORKQuestionType) {
         switch questionType {
-            case .none:
-                self = .none
-            case .scale:
-                self = .scale
-            case .singleChoice:
-                self = .singleChoice
-            case .multipleChoice:
-                self = .multipleChoice
-            case .decimal:
-                self = .decimal
-            case .integer:
-                self = .integer
-            case .boolean:
-                self = .boolean
-            case .text:
-                self = .text
-            case .timeOfDay:
-                self = .timeOfDay
-            case .dateAndTime:
-                self = .dateAndTime
-            case .date:
-                self = .date
-            case .timeInterval:
-                self = .timeInterval
-            case .height:
-                self = .height
-            case .location:
-                self = .location
+        case .none:
+            self = .none
+        case .scale:
+            self = .scale
+        case .singleChoice:
+            self = .singleChoice
+        case .multipleChoice:
+            self = .multipleChoice
+        case .decimal:
+            self = .decimal
+        case .integer:
+            self = .integer
+        case .boolean:
+            self = .boolean
+        case .text:
+            self = .text
+        case .timeOfDay:
+            self = .timeOfDay
+        case .dateAndTime:
+            self = .dateAndTime
+        case .date:
+            self = .date
+        case .timeInterval:
+            self = .timeInterval
+        case .height:
+            self = .height
+        case .location:
+            self = .location
+        case .multiplePicker:
+            self = .multiplePicker
         }
     }
     
@@ -138,7 +142,8 @@ class QuestionTypeTransformer: TransformType {
 
 open class QuestionResult: Result {
     
-    private dynamic var _questionType: Int = QuestionType.none.rawValue
+    @objc private dynamic var _questionType: Int = QuestionType.none.rawValue
+    
     var questionType: QuestionType {
         get {
             return QuestionType(rawValue: _questionType)!

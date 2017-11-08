@@ -12,8 +12,8 @@ import ObjectMapper
 
 open class NumericQuestionResult: QuestionResult {
     
-    dynamic var numericAnswer: NSNumber?
-    dynamic var unit: String?
+    @objc dynamic var numericAnswer: NSNumber?
+    @objc dynamic var unit: String?
     
     convenience init(numericQuestionResult: ORKNumericQuestionResult) {
         self.init(questionResult: numericQuestionResult)

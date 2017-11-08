@@ -45,7 +45,7 @@ open class LoginStepViewController: ORKWaitStepViewController {
             return
         }
         
-        KinveyResearchKit.User.login(username: email, password: password) { user, error in
+        KinveyResearchKit.KinveyUser.login(username: email, password: password) { user, error in
             if user != nil {
                 self.goForward()
             } else if let error = error {

@@ -31,8 +31,8 @@ extension ORKTowerOfHanoiMove: StaticMappable {
 
 open class TowerOfHanoiResult: Result {
     
-    dynamic var puzzleWasSolved: Bool = false
-    dynamic var moves: [ORKTowerOfHanoiMove]?
+    @objc dynamic var puzzleWasSolved: Bool = false
+    @objc dynamic var moves: [ORKTowerOfHanoiMove]?
     
     convenience init(towerOfHanoiResult: ORKTowerOfHanoiResult) {
         self.init(result: towerOfHanoiResult)

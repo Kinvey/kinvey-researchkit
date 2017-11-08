@@ -12,7 +12,7 @@ import ObjectMapper
 
 open class PasscodeResult: Result {
     
-    dynamic var isPasscodeSaved: Bool = false
+    @objc dynamic var isPasscodeSaved: Bool = false
     
     convenience init(passcodeResult: ORKPasscodeResult) {
         self.init(result: passcodeResult)

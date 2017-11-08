@@ -52,16 +52,17 @@ open class LoginFormStepViewController: ORKLoginStepViewController {
             return
         }
         
-        User.resetPassword(email: email) { error in
-            if let error = error {
+        User.resetPassword(usernameOrEmail: email, options: nil) {
+            switch $0 {
+            case .success:
                 let alertTitle = NSLocalizedString("Forgot password?", comment: "")
-                let alertMessage = error.localizedDescription
+                let alertMessage = NSLocalizedString("Email sent!", comment: "")
                 let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
-            } else {
+            case .failure(let error):
                 let alertTitle = NSLocalizedString("Forgot password?", comment: "")
-                let alertMessage = NSLocalizedString("Email sent!", comment: "")
+                let alertMessage = error.localizedDescription
                 let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)

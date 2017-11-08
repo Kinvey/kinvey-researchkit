@@ -31,15 +31,15 @@ extension ORKPSATSample: StaticMappable {
 
 open class PSATResult: Result {
     
-    dynamic var presentationMode: ORKPSATPresentationMode = []
-    dynamic var interStimulusInterval: TimeInterval = 0
-    dynamic var stimulusDuration: TimeInterval = 0
-    dynamic var length: Int = 0
-    dynamic var totalCorrect: Int = 0
-    dynamic var totalDyad: Int = 0
-    dynamic var totalTime: TimeInterval = 0
-    dynamic var initialDigit: Int = 0
-    dynamic var samples: [ORKPSATSample]?
+    @objc dynamic var presentationMode: ORKPSATPresentationMode = []
+    @objc dynamic var interStimulusInterval: TimeInterval = 0
+    @objc dynamic var stimulusDuration: TimeInterval = 0
+    @objc dynamic var length: Int = 0
+    @objc dynamic var totalCorrect: Int = 0
+    @objc dynamic var totalDyad: Int = 0
+    @objc dynamic var totalTime: TimeInterval = 0
+    @objc dynamic var initialDigit: Int = 0
+    @objc dynamic var samples: [ORKPSATSample]?
     
     convenience init(psatResult: ORKPSATResult) {
         self.init(result: psatResult)

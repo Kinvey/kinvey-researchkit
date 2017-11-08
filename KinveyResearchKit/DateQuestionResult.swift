@@ -167,9 +167,9 @@ extension TimeZone: Mappable {
 
 open class DateQuestionResult: QuestionResult {
     
-    dynamic var dateAnswer: Date?
-    dynamic var calendar: Calendar?
-    dynamic var timeZone: TimeZone?
+    @objc dynamic var dateAnswer: Date?
+    @objc dynamic var calendar: Calendar?
+    @objc dynamic var timeZone: TimeZone?
     
     convenience init(dateQuestionResult: ORKDateQuestionResult) {
         self.init(questionResult: dateQuestionResult)

@@ -1,2 +1,2 @@
-github "ResearchKit/ResearchKit" ~> 1.4
-github "Kinvey/swift-sdk" ~> 3.5
+github "ResearchKit/ResearchKit" ~> 1.0
+github "Kinvey/swift-sdk" ~> 3.0

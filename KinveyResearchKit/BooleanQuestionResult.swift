@@ -12,7 +12,7 @@ import ObjectMapper
 
 open class BooleanQuestionResult: QuestionResult {
     
-    dynamic var booleanAnswer: NSNumber?
+    @objc dynamic var booleanAnswer: NSNumber?
     
     convenience init(booleanQuestionResult: ORKBooleanQuestionResult) {
         self.init(questionResult: booleanQuestionResult)

@@ -12,7 +12,7 @@ import ObjectMapper
 
 open class TimeIntervalQuestionResult: QuestionResult {
     
-    dynamic var intervalAnswer: NSNumber?
+    @objc dynamic var intervalAnswer: NSNumber?
     
     convenience init(timeIntervalQuestionResult: ORKTimeIntervalQuestionResult) {
         self.init(questionResult: timeIntervalQuestionResult)

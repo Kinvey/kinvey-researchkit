@@ -71,10 +71,10 @@ extension ORKTappingSample: StaticMappable {
 
 open class TappingIntervalResult: Result {
     
-    dynamic var samples: [ORKTappingSample]?
-    dynamic var stepViewSize: CGSize = CGSize.zero
-    dynamic var buttonRect1: CGRect = CGRect.zero
-    dynamic var buttonRect2: CGRect = CGRect.zero
+    @objc dynamic var samples: [ORKTappingSample]?
+    @objc dynamic var stepViewSize: CGSize = CGSize.zero
+    @objc dynamic var buttonRect1: CGRect = CGRect.zero
+    @objc dynamic var buttonRect2: CGRect = CGRect.zero
     
     convenience init(tappingIntervalResult: ORKTappingIntervalResult) {
         self.init(result: tappingIntervalResult)

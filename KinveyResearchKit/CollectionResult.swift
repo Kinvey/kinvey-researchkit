@@ -130,7 +130,7 @@ class ResultArrayTransformer: TransformType {
 
 open class CollectionResult: Result {
     
-    dynamic var results: [Result]?
+    @objc dynamic var results: [Result]?
     
     var firstResult: Result? {
         get { return results?.first }

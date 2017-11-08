@@ -9,7 +9,8 @@
 import Kinvey
 import ObjectMapper
 
-open class User: Kinvey.User {
+@objc
+open class KinveyUser: Kinvey.User {
     
     var givenName: String?
     var familyName: String?

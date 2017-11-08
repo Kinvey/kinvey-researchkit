@@ -193,10 +193,10 @@ extension ORKSpatialSpanMemoryGameRecord: StaticMappable {
 
 open class SpatialSpanMemoryResult: Result {
     
-    dynamic var score: Int = 0
-    dynamic var numberOfGames: Int = 0
-    dynamic var numberOfFailures: Int = 0
-    dynamic var gameRecords: [ORKSpatialSpanMemoryGameRecord]?
+    @objc dynamic var score: Int = 0
+    @objc dynamic var numberOfGames: Int = 0
+    @objc dynamic var numberOfFailures: Int = 0
+    @objc dynamic var gameRecords: [ORKSpatialSpanMemoryGameRecord]?
     
     convenience init(spatialSpanMemoryResult: ORKSpatialSpanMemoryResult) {
         self.init(result: spatialSpanMemoryResult)

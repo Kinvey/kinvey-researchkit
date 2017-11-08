@@ -80,7 +80,7 @@ class LocationTransform: TransformType {
 
 open class LocationQuestionResult: QuestionResult {
     
-    dynamic var locationAnswer: ORKLocation?
+    @objc dynamic var locationAnswer: ORKLocation?
     
     convenience init(locationQuestionResult: ORKLocationQuestionResult) {
         self.init(questionResult: locationQuestionResult)

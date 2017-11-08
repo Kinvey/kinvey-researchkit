@@ -17,7 +17,7 @@ open class KinveyVerificationViewController : ORKVerificationStepViewController 
     
     override open func resendEmailButtonTapped() {
         if let user = verificationStep.client.activeUser {
-            user.sendEmailConfirmation(verificationStep.client) { result in
+            user.sendEmailConfirmation(options: Options(client: verificationStep.client)) { result in
                 switch result {
                 case .success:
                     if let completionHandler = self.verificationStep.completionHandler {

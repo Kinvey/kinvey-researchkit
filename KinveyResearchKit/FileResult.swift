@@ -68,8 +68,8 @@ class URLContentStringTransform: TransformType {
 
 open class FileResult: Result {
     
-    dynamic var contentType: String?
-    dynamic var fileURL: URL?
+    @objc dynamic var contentType: String?
+    @objc dynamic var fileURL: URL?
     
     private var fileReference: FileReference?
     
@@ -96,7 +96,7 @@ open class FileResult: Result {
                 let file = File()
                 file.mimeType = contentType
                 file.fileName = fileURL.lastPathComponent
-                FileStore.getInstance().upload(file, path: fileURL.path) { file, error in
+                FileStore().upload(file, path: fileURL.path) { file, error in
                     if let file = file, let fileId = file.fileId {
                         let fileReference = FileReference(id: fileId)
                         self.fileReference = fileReference

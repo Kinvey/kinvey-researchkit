@@ -12,9 +12,9 @@ import ObjectMapper
 
 open class DataResult: Result {
     
-    dynamic var contentType: String?
-    dynamic var filename: String?
-    dynamic var data: Data?
+    @objc dynamic var contentType: String?
+    @objc dynamic var filename: String?
+    @objc dynamic var data: Data?
     
     convenience init(dataResult: ORKDataResult) {
         self.init(result: dataResult)

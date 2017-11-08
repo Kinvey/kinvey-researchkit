@@ -12,9 +12,9 @@ import ObjectMapper
 
 open class TimedWalkResult: Result {
     
-    dynamic var distanceInMeters: Double = 0
-    dynamic var timeLimit: TimeInterval = 0
-    dynamic var duration: TimeInterval = 0
+    @objc dynamic var distanceInMeters: Double = 0
+    @objc dynamic var timeLimit: TimeInterval = 0
+    @objc dynamic var duration: TimeInterval = 0
     
     convenience init(timedWalkResult: ORKTimedWalkResult) {
         self.init(result: timedWalkResult)

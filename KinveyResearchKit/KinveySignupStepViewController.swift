@@ -48,17 +48,24 @@ open class KinveySignupStepViewController: ORKWaitStepViewController {
             }
         }
         
-        User.signup(username: email!, password: password!, client: signupStep.client) { user, error in
-            if let user = user as? KinveyResearchKit.User {
-                user.email = email
-                user.givenName = givenName
-                user.familyName = familyName
-                user.gender = gender
-                user.dateOfBirth = dateOfBirth
-                user.save(client: self.signupStep.client) { user, error in
-                    self.goForward()
-                }
-            } else {
+        let user = KinveyResearchKit.KinveyUser()
+        user.email = email
+        user.givenName = givenName
+        user.familyName = familyName
+        user.gender = gender
+        user.dateOfBirth = dateOfBirth
+        User.signup(
+            username: email!,
+            password: password!,
+            user: user,
+            options: Options(
+                client: signupStep.client
+            )
+        ) {
+            switch $0 {
+            case .success(_):
+                self.goForward()
+            case .failure(_):
                 self.goBackward()
             }
         }

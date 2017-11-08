@@ -32,6 +32,7 @@ import UIKit
 import ResearchKit
 import KinveyResearchKit
 import Kinvey
+
 /**
     The purpose of this view controller is to show you the kinds of data
     you can fetch from a specific `ORKResult`. The intention is for this view

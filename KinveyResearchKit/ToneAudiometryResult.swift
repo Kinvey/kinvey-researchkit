@@ -66,8 +66,8 @@ extension ORKToneAudiometrySample: StaticMappable {
 
 open class ToneAudiometryResult: Result {
     
-    dynamic var outputVolume: NSNumber?
-    dynamic var samples: [ORKToneAudiometrySample]?
+    @objc dynamic var outputVolume: NSNumber?
+    @objc dynamic var samples: [ORKToneAudiometrySample]?
     
     convenience init(toneAudiometryResult: ORKToneAudiometryResult) {
         self.init(result: toneAudiometryResult)

@@ -12,8 +12,8 @@ import ObjectMapper
 
 open class ReactionTimeResult: Result {
     
-    dynamic var timestamp: TimeInterval = 0
-    dynamic var fileResult: FileResult?
+    @objc dynamic var timestamp: TimeInterval = 0
+    @objc dynamic var fileResult: FileResult?
     
     convenience init(reactionTimeResult: ORKReactionTimeResult) {
         self.init(result: reactionTimeResult)

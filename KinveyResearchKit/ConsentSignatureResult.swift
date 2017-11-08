@@ -56,8 +56,8 @@ extension ORKConsentSignature: StaticMappable {
 
 open class ConsentSignatureResult: Result {
     
-    dynamic var signature: ORKConsentSignature?
-    dynamic var consented: Bool = false
+    @objc dynamic var signature: ORKConsentSignature?
+    @objc dynamic var consented: Bool = false
     
     convenience init(consentSignatureResult: ORKConsentSignatureResult) {
         self.init(result: consentSignatureResult)

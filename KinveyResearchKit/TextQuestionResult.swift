@@ -12,7 +12,7 @@ import ObjectMapper
 
 open class TextQuestionResult: QuestionResult {
     
-    dynamic var textAnswer: String?
+    @objc dynamic var textAnswer: String?
     
     convenience init(textQuestionResult: ORKTextQuestionResult) {
         self.init(questionResult: textQuestionResult)

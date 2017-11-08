@@ -12,8 +12,8 @@ import ObjectMapper
 
 open class TaskResult: CollectionResult {
     
-    dynamic var taskRunUUID: String?
-    dynamic var outputDirectory: String?
+    @objc dynamic var taskRunUUID: String?
+    @objc dynamic var outputDirectory: String?
     
     convenience init(taskResult: ORKTaskResult) {
         self.init(collectionResult: taskResult)

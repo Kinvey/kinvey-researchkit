@@ -42,7 +42,7 @@ extension DateComponents: Mappable {
 
 open class TimeOfDayQuestionResult: QuestionResult {
     
-    dynamic var dateComponentsAnswer: DateComponents?
+    @objc dynamic var dateComponentsAnswer: DateComponents?
     
     convenience init(timeOfDayQuestionResult: ORKTimeOfDayQuestionResult) {
         self.init(questionResult: timeOfDayQuestionResult)
