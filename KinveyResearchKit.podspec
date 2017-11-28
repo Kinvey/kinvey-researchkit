@@ -90,14 +90,8 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "KinveyResearchKit/**/*.{swift,h,m}"
-  s.exclude_files = "KinveyResearchKit/User.swift"
 
   # s.public_header_files = "Classes/**/*.h"
-
-  s.prepare_command = <<-CMD
-  	sed 's/class User/class KinveyResearchKitUser/g' KinveyResearchKit/User.swift > KinveyResearchKit/KinveyResearchKitUser.swift
-	echo 'public typealias User = KinveyResearchKitUser' >> KinveyResearchKit/KinveyResearchKitUser.swift
-  CMD
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
